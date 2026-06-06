@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이메일 첨부 이미지 용량 줄이기 — 10MB를 200KB로 만드는 법 | XP Image Tools</title>
+  <meta name="description" content="이메일 첨부 이미지 용량을 빠르게 줄이는 방법. 스마트폰 사진을 이메일 전송에 적합한 크기로 압축하고 변환하는 실용적인 가이드.">
+  <meta name="keywords" content="이메일 이미지 용량 줄이기, 이메일 첨부 사진 압축, 이메일 사진 용량, 이미지 메일 전송, 사진 파일 크기 줄이기">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="XP Image Tools">
+  <meta name="theme-color" content="#1F5EBF">
+  <link rel="canonical" href="https://xp-image-tools.pages.dev/pages/blog/email-image-attach.html">
+  <link rel="alternate" hreflang="ko" href="https://xp-image-tools.pages.dev/pages/blog/email-image-attach.html">
+  <link rel="alternate" hreflang="x-default" href="https://xp-image-tools.pages.dev/pages/blog/email-image-attach.html">
+  <meta property="og:type"         content="article">
+  <meta property="og:title"        content="이메일 첨부 이미지 용량 줄이기 — 10MB를 200KB로 만드는 법">
+  <meta property="og:description"  content="이메일 첨부 이미지 용량을 빠르게 줄이는 방법. 스마트폰 사진을 이메일 전송에 적합한 크기로 압축하고 변환하는 실용적인 가이드.">
+  <meta property="og:url"          content="https://xp-image-tools.pages.dev/pages/blog/email-image-attach.html">
+  <meta property="og:image"        content="https://xp-image-tools.pages.dev/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:image" content="https://xp-image-tools.pages.dev/og-image.png">
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon-180.png">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/xp-theme.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://xp-image-tools.pages.dev/pages/blog/email-image-attach.html",
+    "headline": "이메일 첨부 이미지 용량 줄이기 — 10MB를 200KB로 만드는 법",
+    "description": "이메일 첨부 이미지 용량을 빠르게 줄이는 방법. 스마트폰 사진을 이메일 전송에 적합한 크기로 압축하고 변환하는 실용적인 가이드.",
+    "url": "https://xp-image-tools.pages.dev/pages/blog/email-image-attach.html",
+    "datePublished": "2025-06-07",
+    "dateModified": "2025-06-07",
+    "inLanguage": "ko-KR",
+    "author": {"@type": "Organization", "name": "XP Image Tools"},
+    "publisher": {"@type": "Organization", "name": "XP Image Tools", "url": "https://xp-image-tools.pages.dev"},
+    "image": "https://xp-image-tools.pages.dev/og-image.png",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xp-image-tools.pages.dev/pages/blog/email-image-attach.html"}
+  }
+  </script>
+  <style>
+    body { overflow:auto; background:#ECE9D8; }
+    #desktop { position:static; overflow:visible; }
+    .page-wrapper { max-width:860px; margin:0 auto; padding:20px 16px 80px; }
+    .page-window { background:#ECE9D8; border:2px solid #1A46A8; border-radius:8px 8px 4px 4px; box-shadow:4px 4px 16px rgba(0,0,0,0.3); overflow:hidden; font-family:'Tahoma',Arial,sans-serif; }
+    .titlebar { background:linear-gradient(180deg,#1F5EBF 0%,#2B7BDB 8%,#2564C1 92%,#1A4D9E 100%); padding:4px 8px; display:flex; align-items:center; gap:8px; color:white; font-size:12px; font-weight:bold; user-select:none; }
+    .page-nav { background:#ECE9D8; border-bottom:1px solid #D4D0C8; padding:6px 16px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font-size:11px; font-family:'Tahoma',Arial,sans-serif; }
+    .page-nav a { color:#3169C6; text-decoration:none; } .page-nav a:hover { text-decoration:underline; }
+    .page-content { padding:22px 28px; background:white; }
+    .article-meta { font-size:11px; color:#888; margin-bottom:18px; display:flex; gap:12px; flex-wrap:wrap; }
+    .article-meta span { display:flex; align-items:center; gap:4px; }
+    h1.page-title { font-size:20px; color:#0A246A; margin:0 0 8px; line-height:1.4; }
+    h2.section-title { font-size:14px; color:#1A52C8; margin:24px 0 10px; border-left:3px solid #3169C6; padding-left:8px; }
+    h3.sub-title { font-size:12px; color:#1A3A7A; font-weight:bold; margin:14px 0 5px; }
+    p { font-size:12px; line-height:1.9; color:#333; margin-bottom:12px; }
+    ul, ol { font-size:12px; line-height:1.9; color:#333; margin-bottom:12px; padding-left:22px; }
+    li { margin-bottom:6px; } strong { color:#1A3A7A; }
+    .highlight-box { background:#EEF4FF; border:1px solid #B0C8F0; border-left:4px solid #3169C6; padding:14px 18px; margin:16px 0; border-radius:0 4px 4px 0; }
+    .highlight-box p { margin:0; }
+    .tip-box { background:#F0FFF0; border:1px solid #90D090; border-left:4px solid #30A030; padding:14px 18px; margin:16px 0; border-radius:0 4px 4px 0; }
+    .tip-box p { margin:0; }
+    .warn-box { background:#FFF8E8; border:1px solid #E0C870; border-left:4px solid #C8960C; padding:14px 18px; margin:16px 0; border-radius:0 4px 4px 0; }
+    .warn-box p { margin:0; }
+    .info-table { width:100%; border-collapse:collapse; font-size:11px; margin:12px 0; }
+    .info-table th { background:#3169C6; color:white; padding:8px 10px; text-align:left; }
+    .info-table td { padding:8px 10px; border:1px solid #D0CDB8; }
+    .info-table tr:nth-child(even) td { background:#F5F3E8; }
+    .cta-box { background:linear-gradient(135deg,#EEF4FF,#E8F0FF); border:2px solid #3169C6; border-radius:6px; padding:18px 22px; margin:20px 0; text-align:center; }
+    .cta-box p { margin:0 0 10px; font-size:13px; font-weight:bold; color:#0A246A; }
+    .cta-box a { display:inline-block; background:#3169C6; color:white; text-decoration:none; padding:8px 22px; border-radius:3px; font-size:12px; font-weight:bold; }
+    .related-posts { background:#F5F3E8; border:1px solid #D0CDB8; border-radius:4px; padding:14px 18px; margin-top:24px; }
+    .related-posts h3 { font-size:12px; color:#1A3A7A; margin:0 0 10px; }
+    .related-posts ul { margin:0; padding-left:18px; }
+    .related-posts li { margin-bottom:4px; font-size:11px; }
+    .related-posts a { color:#3169C6; text-decoration:none; }
+    .related-posts a:hover { text-decoration:underline; }
+    .page-footer { background:#ECE9D8; border-top:1px solid #D4D0C8; padding:10px 16px; font-size:10px; color:#666; display:flex; justify-content:space-between; flex-wrap:wrap; gap:4px; }
+    .page-footer a { color:#3169C6; text-decoration:none; }
+    @media(max-width:600px){ .page-content { padding:14px 16px; } }
+  </style>
+  <!-- Google Analytics 4 -->
+  <!-- TODO: GA_MEASUREMENT_ID를 실제 측정 ID(G-XXXXXXXXXX)로 교체하세요 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "GA_MEASUREMENT_ID");
+  </script>
+</head>
+<body>
+<div id="desktop">
+<div class="page-wrapper">
+  <article class="page-window">
+    <div class="titlebar"><span>📝</span><span>XP Image Tools 블로그</span></div>
+    <nav class="page-nav" aria-label="사이트 내비게이션"><a href="../../index.html">🏠 홈</a> <span style="color:#999">·</span> <a href="../about.html">사이트 소개</a> <span style="color:#999">·</span> <a href="../features.html">기능 소개</a> <span style="color:#999">·</span> <a href="../guide.html">사용 가이드</a> <span style="color:#999">·</span> <a href="../faq.html">자주 묻는 질문</a> <span style="color:#999">·</span> <a href="index.html">블로그</a> <span style="color:#999">·</span> <a href="../contact.html">문의</a></nav>
+    <div class="page-content">
+      <h1 class="page-title">이메일 첨부 이미지 용량 줄이기 — 10MB를 200KB로 만드는 법</h1>
+      <div class="article-meta">
+        <span>📅 2025-06-07</span>
+        <span>⏱️ 읽는 시간 약 4분</span>
+        <span>✍️ XP Image Tools 팀</span>
+      </div>
+
+      <p>스마트폰으로 찍은 사진을 이메일로 보내려고 하면 "첨부 파일 크기 제한 초과" 오류가 뜨는 경험을 해보셨나요? 최신 스마트폰 사진은 한 장에 5~15MB에 달해 이메일 첨부에 적합하지 않습니다. 몇 번의 클릭으로 10MB 사진을 200KB로 줄이는 방법을 알아봅니다.</p>
+
+      <h2 class="section-title">📧 주요 이메일 서비스 첨부 용량 제한</h2>
+      <table class="info-table">
+        <thead><tr><th>서비스</th><th>첨부 제한</th><th>권장 사진 크기</th></tr></thead>
+        <tbody>
+          <tr><td>Gmail</td><td>25MB</td><td>사진 1장당 3MB 이하</td></tr>
+          <tr><td>네이버 메일</td><td>30MB</td><td>사진 1장당 3MB 이하</td></tr>
+          <tr><td>카카오메일</td><td>30MB</td><td>사진 1장당 3MB 이하</td></tr>
+          <tr><td>회사 메일 (일반)</td><td>10~20MB</td><td>사진 1장당 1~2MB 이하</td></tr>
+          <tr><td>Outlook.com</td><td>20MB</td><td>사진 1장당 2MB 이하</td></tr>
+        </tbody>
+      </table>
+      <p>사진 여러 장을 함께 보내야 한다면 각 파일을 더 작게 압축해야 합니다. 5장을 보낼 경우 각 파일을 500KB 이하로 유지하면 대부분의 서비스에서 문제없이 전송됩니다.</p>
+
+      <h2 class="section-title">🛠️ XP Image Tools로 이메일용 사진 만들기</h2>
+      <p>총 3단계로 이메일에 적합한 사진을 만들 수 있습니다.</p>
+      <h3 class="sub-title">방법 1: 자동 압축 (가장 쉬움)</h3>
+      <ol style="font-size:12px;line-height:1.9;padding-left:22px;">
+        <li>XP Image Tools 접속 → 「📦 이미지 압축」 선택</li>
+        <li>이메일로 보낼 사진 업로드</li>
+        <li>자동 모드에서 목표 크기 「200KB」 선택</li>
+        <li>출력 형식 「JPG」 선택</li>
+        <li>「압축 실행」 → 결과 확인 후 다운로드</li>
+      </ol>
+      <h3 class="sub-title">방법 2: 크기 축소 후 압축 (화질 중시)</h3>
+      <p>원본이 4000px 이상의 고해상도라면 먼저 크기를 줄인 후 압축하면 더 좋은 결과를 얻을 수 있습니다.</p>
+      <ol style="font-size:12px;line-height:1.9;padding-left:22px;">
+        <li>「🖼️ 이미지 크기 변경」에서 가로를 1600px로 줄이기 (비율 유지 체크)</li>
+        <li>JPG 형식, 품질 85%로 다운로드</li>
+        <li>결과 파일이 여전히 크다면 「📦 이미지 압축」에서 추가 압축</li>
+      </ol>
+      <div class="tip-box">
+        <p>✅ <strong>결과 예시:</strong> 12MB(4000×3000px) 스마트폰 사진 → 크기 1600×1200px 조절 + 자동 압축 200KB → 최종 195KB. 화질은 이메일 확인에 충분한 수준 유지.</p>
+      </div>
+
+      <h2 class="section-title">📋 상황별 권장 설정</h2>
+      <table class="info-table">
+        <thead><tr><th>상황</th><th>목표 크기</th><th>형식</th><th>품질</th></tr></thead>
+        <tbody>
+          <tr><td>일반 사진 공유</td><td>200~500KB</td><td>JPG</td><td>자동</td></tr>
+          <tr><td>업무 보고용 사진</td><td>500KB~1MB</td><td>JPG</td><td>85%</td></tr>
+          <tr><td>문서·스크린샷</td><td>200~500KB</td><td>PNG</td><td>무손실</td></tr>
+          <tr><td>여러 장 동시 전송</td><td>각 100~200KB</td><td>JPG</td><td>자동</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title">💡 이메일 이미지 전송 시 알아두면 좋은 것들</h2>
+      <ul>
+        <li><strong>파일명에 한글 지양:</strong> 일부 이메일 클라이언트에서 한글 파일명이 깨질 수 있습니다. 영문 파일명을 사용하는 것이 안전합니다.</li>
+        <li><strong>여러 장은 ZIP으로 묶기:</strong> 사진 10장 이상은 ZIP으로 압축하여 하나의 파일로 전송하면 받는 사람이 편리합니다.</li>
+        <li><strong>고화질이 필요하다면 클라우드 링크:</strong> 인쇄용 원본이 필요한 경우 구글 드라이브나 카카오드라이브 링크를 공유하는 것이 낫습니다.</li>
+      </ul>
+
+      <div class="related-posts">
+        <h3>📚 관련 글</h3>
+        <ul>
+          <li><a href="image-compress-tips.html">이미지 압축 완벽 가이드 — 화질 손실 없이 용량 90% 줄이기</a></li>
+          <li><a href="sns-image-guide.html">SNS별 이미지 크기 완벽 정리 2025</a></li>
+          <li><a href="png-jpg-difference.html">PNG vs JPG 차이점 완벽 정리</a></li>
+        </ul>
+      </div>
+
+      <h2 class="section-title">🔐 업무용 이미지 전송 시 보안 주의사항</h2>
+      <p>업무상 기밀이 포함된 이미지(계약서, 내부 문서, 개인정보 등)를 이메일로 전송할 때는 보안에 주의해야 합니다. XP Image Tools는 모든 처리가 브라우저에서만 이루어지므로 이미지 데이터가 외부 서버로 전송되지 않습니다. 따라서 기밀 문서의 스크린샷도 안심하고 크기를 줄일 수 있습니다. 단, 이메일 전송 자체는 수신자의 보안 환경에 따라 달라지므로 매우 민감한 정보는 암호화된 메일이나 보안 문서 공유 서비스를 사용하는 것을 권장합니다.</p>
+      <h2 class="section-title">📱 스마트폰에서 바로 하는 법</h2>
+      <p>스마트폰으로 찍은 사진을 바로 XP Image Tools로 처리할 수 있습니다. 모바일 Chrome이나 Safari 브라우저에서 XP Image Tools에 접속한 후, 파일 선택 버튼을 누르면 갤러리에서 직접 사진을 선택할 수 있습니다. 압축 후 다운로드된 파일은 갤러리에 저장되며, 이메일 앱에서 바로 첨부할 수 있습니다.</p>
+      <h2 class="section-title">⚡ 자주 쓰는 설정 빠르게 적용하기</h2>
+      <p>이메일 업무가 많다면 자주 사용하는 설정을 기억해 두세요. 일반 업무 사진은 자동 압축 200KB, 출력 형식 JPG로 설정하면 대부분의 상황에서 적합합니다. 스크린샷이나 문서 이미지는 PNG 형식으로 저장해야 텍스트가 선명하게 유지됩니다. 이미지에 텍스트가 포함된 경우 JPG로 압축하면 텍스트 주변이 흐릿해질 수 있습니다.</p>
+
+      <div class="cta-box">
+        <p>🚀 지금 바로 무료로 이미지를 편집해 보세요!</p>
+        <a href="../../index.html">XP Image Tools 시작하기</a>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>© 2025 XP Image Tools · protebe2022@gmail.com</span>
+      <span><a href="../about.html">소개</a> · <a href="../guide.html">가이드</a> · <a href="../faq.html">FAQ</a> · <a href="../contact.html">문의</a> · <a href="../privacy.html">개인정보</a> · <a href="../terms.html">약관</a></span>
+    </footer>
+  </article>
+</div>
+</div>
+</body>
+</html>

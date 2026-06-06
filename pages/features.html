@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기능 소개 - 이미지 크기변경·압축·PNG JPG WEBP 변환 | XP Image Tools</title>
+  <meta name="description" content="이미지 크기 변경, 압축, PNG/JPG/WEBP 변환 기능 상세 안내. 단계적 리샘플링, 자동 압축, 투명 배경 지원 등 고급 기능을 무료로 이용하세요.">
+  <meta name="keywords" content="이미지 크기 변경 방법, 이미지 압축 방법, PNG JPG 변환, WEBP 변환, 이미지 용량 줄이기, 투명 배경 PNG">
+  <meta name="robots" content="index, follow">
+    <meta name="author" content="XP Image Tools">
+  <meta name="theme-color" content="#1F5EBF">
+  <link rel="alternate" hreflang="ko" href="https://xp-image-tools.pages.dev/pages/features.html">
+  <link rel="alternate" hreflang="x-default" href="https://xp-image-tools.pages.dev/pages/features.html">
+  <link rel="canonical" href="https://xp-image-tools.pages.dev/pages/features.html">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="기능 소개 - XP Image Tools">
+  <meta property="og:description" content="이미지 크기 변경, 압축, 포맷 변환 기능 상세 소개. Canvas API 기반 브라우저 처리.">
+  <meta property="og:url"         content="https://xp-image-tools.pages.dev/pages/features.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon"  href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon-180.png">
+  <!-- og:image -->
+  <meta property="og:image" content="https://xp-image-tools.pages.dev/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://xp-image-tools.pages.dev/og-image.png">
+
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/xp-theme.css">
+  <style>
+    body { overflow: auto; background: #ECE9D8; }
+    #desktop { position: static; overflow: visible; }
+
+    .page-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 20px 16px 80px;
+    }
+
+    .page-window {
+      background: #ECE9D8;
+      border: 2px solid #1A46A8;
+      border-radius: 8px 8px 4px 4px;
+      box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+      overflow: hidden;
+      font-family: 'Tahoma', Arial, sans-serif;
+    }
+
+    .page-content { padding: 20px 24px; background: white; }
+
+    h1.page-title {
+      font-size: 18px;
+      color: #0A246A;
+      margin-bottom: 6px;
+      border-bottom: 2px solid #3169C6;
+      padding-bottom: 8px;
+    }
+
+    h2.section-title {
+      font-size: 14px;
+      color: #1A52C8;
+      margin: 24px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    h3.sub-title {
+      font-size: 12px;
+      color: #333;
+      margin: 14px 0 6px;
+      border-left: 3px solid #3169C6;
+      padding-left: 8px;
+    }
+
+    p { font-size: 12px; line-height: 1.8; color: #333; margin-bottom: 10px; }
+    ul, ol { font-size: 12px; line-height: 1.8; color: #333; margin-bottom: 10px; padding-left: 20px; }
+    li { margin-bottom: 4px; }
+
+    .highlight-box {
+      background: #EEF4FF;
+      border: 1px solid #B0C8F0;
+      border-left: 4px solid #3169C6;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .warning-box {
+      background: #FFF8E8;
+      border: 1px solid #F0D080;
+      border-left: 4px solid #D0A000;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .success-box {
+      background: #F0FAF0;
+      border: 1px solid #90D090;
+      border-left: 4px solid #2A8A2A;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin: 10px 0;
+    }
+    .compare-table th {
+      background: #3169C6;
+      color: white;
+      padding: 7px 10px;
+      text-align: left;
+    }
+    .compare-table td {
+      padding: 7px 10px;
+      border: 1px solid #D0CDB8;
+      vertical-align: top;
+    }
+    .compare-table tr:nth-child(even) td { background: #F5F3E8; }
+    .compare-table .check { color: #2A8A2A; font-weight: bold; }
+    .compare-table .cross { color: #CC2020; }
+
+    .tech-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin: 12px 0;
+    }
+
+    .tech-card {
+      background: #F5F3E8;
+      border: 1px solid #D0CDB8;
+      border-radius: 4px;
+      padding: 12px;
+    }
+    .tech-card .icon { font-size: 24px; margin-bottom: 6px; }
+    .tech-card .name { font-size: 12px; font-weight: bold; color: #0A246A; margin-bottom: 4px; }
+    .tech-card .desc { font-size: 11px; color: #555; line-height: 1.5; }
+
+    .flow-diagram {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+      padding: 12px;
+      background: #F5F3E8;
+      border: 1px solid #D0CDB8;
+      border-radius: 4px;
+    }
+    .flow-step {
+      background: #3169C6;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    .flow-arrow { font-size: 16px; color: #666; }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #3169C6;
+      text-decoration: none;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    .nav-back:hover { text-decoration: underline; }
+
+    code {
+      background: #F0EDE0;
+      border: 1px solid #D0CDB8;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: #800000;
+    }
+
+    @media (max-width: 600px) {
+      .tech-card-grid { grid-template-columns: 1fr; }
+      .flow-diagram { flex-direction: column; align-items: flex-start; }
+      .page-content { padding: 14px 16px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://xp-image-tools.pages.dev/pages/features.html",
+        "name": "XP Image Tools 기능 소개",
+        "url": "https://xp-image-tools.pages.dev/pages/features.html",
+        "description": "이미지 크기 변경, 압축, PNG/JPG/WEBP 변환 기능의 상세 안내. 단계적 리샘플링, 이진 탐색 압축, 투명 배경 지원 등 고급 기능을 무료로 제공합니다.",
+        "inLanguage": "ko-KR",
+        "dateModified": "2025-06-01",
+        "isPartOf": {
+          "@id": "https://xp-image-tools.pages.dev/#website"
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Google Analytics 4 -->
+  <!-- TODO: GA_MEASUREMENT_ID를 실제 측정 ID(G-XXXXXXXXXX)로 교체하세요 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "GA_MEASUREMENT_ID");
+  </script>
+</head>
+
+<body>
+<div id="desktop">
+<div class="page-wrapper">
+      <article class="page-window" role="main">
+
+    <header class="xp-titlebar">
+      <div class="xp-titlebar-left">
+        <span class="xp-titlebar-icon">⚙️</span>
+        <span class="xp-titlebar-title">기능 소개 - XP Image Tools</span>
+      </div>
+    </header>
+
+    <nav style="background:#ECE9D8;border-bottom:1px solid #D4D0C8;padding:6px 16px;font-size:11px;font-family:'Tahoma',Arial,sans-serif;display:flex;gap:6px;flex-wrap:wrap;align-items:center;" aria-label="사이트 내비게이션">
+      <a href="../index.html" style="color:#3169C6;text-decoration:none;">🏠 홈</a> <span style="color:#999;">·</span> <a href="about.html" style="color:#3169C6;text-decoration:none;">사이트 소개</a> <span style="color:#999;">·</span> <span style="color:#333;font-weight:bold;">기능 소개</span> <span style="color:#999;">·</span> <a href="guide.html" style="color:#3169C6;text-decoration:none;">사용 가이드</a> <span style="color:#999;">·</span> <a href="faq.html" style="color:#3169C6;text-decoration:none;">자주 묻는 질문</a> <span style="color:#999;">·</span> <a href="contact.html" style="color:#3169C6;text-decoration:none;">문의</a> <span style="color:#999;">·</span> <a href="privacy.html" style="color:#3169C6;text-decoration:none;">개인정보처리방침</a> <span style="color:#999;">·</span> <a href="terms.html" style="color:#3169C6;text-decoration:none;">이용약관</a>
+    </nav>
+    <div class="page-content">
+
+      <h1 class="page-title">⚙️ 기능 소개</h1>
+      <p style="color:#666;font-size:11px;margin-bottom:16px;">XP Image Tools의 모든 기능을 자세히 소개합니다.</p>
+
+      <!-- 이미지 크기 변경 -->
+      <h2 class="section-title">🖼️ 이미지 크기 변경</h2>
+      <p>
+        이미지 크기 변경은 XP Image Tools의 핵심 기능입니다. 업로드한 이미지를 원하는 픽셀 크기로
+        정확하게 변환할 수 있습니다. 단순한 크기 조절을 넘어, 고품질 리샘플링 알고리즘을 적용하여
+        최대한 선명한 결과물을 제공합니다.
+      </p>
+
+      <h3 class="sub-title">지원 입력 형식</h3>
+      <table class="compare-table">
+        <thead>
+          <tr><th>형식</th><th>전체 이름</th><th>특징</th><th>지원 여부</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>JPG / JPEG</strong></td><td>Joint Photographic Experts Group</td><td>손실 압축, 작은 파일 크기, 사진에 적합</td><td><span class="check">✅ 지원</span></td></tr>
+          <tr><td><strong>PNG</strong></td><td>Portable Network Graphics</td><td>무손실 압축, 투명 배경 지원, 그래픽에 적합</td><td><span class="check">✅ 지원</span></td></tr>
+          <tr><td><strong>WEBP</strong></td><td>Web Picture Format</td><td>Google 개발, 높은 압축 효율, 최신 브라우저 지원</td><td><span class="check">✅ 지원</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-title">크기 변경 옵션</h3>
+      <ul>
+        <li><strong>가로/세로 픽셀 입력:</strong> 정확한 픽셀 값을 직접 입력할 수 있습니다. 최소 1px, 최대 8000px까지 지원합니다.</li>
+        <li><strong>비율 유지:</strong> 체크박스를 선택하면 가로 또는 세로 중 하나만 입력해도 나머지 값이 자동으로 계산됩니다. 이미지가 왜곡되지 않습니다.</li>
+        <li><strong>빠른 크기 선택:</strong> FHD(1920×1080), HD(1280×720), 800×600, VGA(640×480), 200×200 등 자주 사용하는 크기를 버튼 하나로 설정할 수 있습니다.</li>
+        <li><strong>출력 형식 선택:</strong> 원본 형식 유지 또는 JPG, PNG, WEBP 중 선택하여 저장할 수 있습니다.</li>
+        <li><strong>품질 조절:</strong> JPG, WEBP의 경우 압축 품질을 10~100% 범위에서 슬라이더로 조절할 수 있습니다.</li>
+      </ul>
+
+      <h3 class="sub-title">고화질 처리 알고리즘</h3>
+      <p>
+        일반적인 이미지 리사이징은 한 번에 크기를 줄이는 방식을 사용합니다. 그러나 이 방법은 이미지가
+        크게 축소될 때 품질 저하가 발생할 수 있습니다. XP Image Tools는 <strong>단계적 리샘플링
+        (Stepwise Resampling)</strong> 방식을 적용합니다.
+      </p>
+      <p>
+        원본 크기가 목표 크기의 2배 이상일 경우, 여러 중간 단계를 거쳐 점진적으로 크기를 줄입니다.
+        각 단계에서 <code>imageSmoothingQuality: 'high'</code> 설정을 적용하여 최상의 품질을 유지합니다.
+      </p>
+
+      <div class="flow-diagram" role="img" aria-label="이미지 처리 흐름">
+        <div class="flow-step">원본 4K (3840px)</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">중간 1 (2560px)</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">중간 2 (1706px)</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">최종 (1280px)</div>
+      </div>
+
+      <!-- 이미지 최적화 -->
+      <h2 class="section-title">📦 이미지 최적화 (개발 중)</h2>
+      <p>
+        이미지 최적화는 원본 품질을 최대한 유지하면서 파일 크기를 줄이는 기능입니다. 웹사이트 로딩
+        속도 향상, 저장 공간 절약, 이메일 첨부 파일 크기 제한 등의 상황에서 매우 유용합니다.
+      </p>
+
+      <h3 class="sub-title">형식별 최적화 전략</h3>
+      <table class="compare-table">
+        <thead>
+          <tr><th>형식</th><th>압축 방식</th><th>적합한 용도</th><th>예상 절감율</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>JPG</strong></td>
+            <td>손실 압축 (DCT 변환)</td>
+            <td>사진, 복잡한 색상의 이미지</td>
+            <td>50~80%</td>
+          </tr>
+          <tr>
+            <td><strong>PNG</strong></td>
+            <td>무손실 압축 (DEFLATE)</td>
+            <td>로고, 아이콘, 투명 배경</td>
+            <td>20~40%</td>
+          </tr>
+          <tr>
+            <td><strong>WEBP</strong></td>
+            <td>손실/무손실 선택 가능</td>
+            <td>웹 이미지 전반</td>
+            <td>60~90%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        <p>🔧 <strong>개발 중:</strong> 이미지 최적화 기능은 현재 개발 중입니다. 곧 업데이트될 예정입니다.</p>
+      </div>
+
+      <!-- 브라우저 처리 방식 -->
+      <h2 class="section-title">🖥️ 브라우저 처리 방식</h2>
+      <p>
+        XP Image Tools의 가장 큰 기술적 특징은 <strong>모든 이미지 처리가 사용자의 브라우저 내에서
+        완전히 이루어진다</strong>는 것입니다. 이미지 데이터가 서버로 전송되지 않습니다.
+      </p>
+
+      <h3 class="sub-title">처리 흐름</h3>
+      <div class="flow-diagram" role="img" aria-label="브라우저 처리 흐름">
+        <div class="flow-step">파일 선택</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">File API 읽기</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">Canvas 렌더링</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">Blob 생성</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">로컬 다운로드</div>
+      </div>
+
+      <h3 class="sub-title">사용된 브라우저 API</h3>
+      <div class="tech-card-grid">
+        <div class="tech-card">
+          <div class="icon">🎨</div>
+          <div class="name">Canvas API</div>
+          <div class="desc">이미지 렌더링 및 리사이징의 핵심. <code>drawImage()</code>, <code>toBlob()</code> 메서드 사용.</div>
+        </div>
+        <div class="tech-card">
+          <div class="icon">📂</div>
+          <div class="name">File API</div>
+          <div class="desc">로컬 파일 시스템에서 이미지를 읽어오는 API. <code>FileReader</code> 클래스 활용.</div>
+        </div>
+        <div class="tech-card">
+          <div class="icon">🔗</div>
+          <div class="name">Blob & URL API</div>
+          <div class="desc">변환 결과를 임시 URL로 생성하여 미리보기 및 다운로드에 활용.</div>
+        </div>
+        <div class="tech-card">
+          <div class="icon">📋</div>
+          <div class="name">Clipboard API</div>
+          <div class="desc">Ctrl+V로 클립보드의 이미지를 직접 붙여넣기하는 기능 지원.</div>
+        </div>
+        <div class="tech-card">
+          <div class="icon">🖱️</div>
+          <div class="name">Drag & Drop API</div>
+          <div class="desc">파일을 화면에 직접 끌어다 놓아 업로드하는 직관적인 인터페이스 제공.</div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">브라우저 호환성</h3>
+      <table class="compare-table">
+        <thead>
+          <tr><th>브라우저</th><th>버전</th><th>Canvas</th><th>WEBP 출력</th><th>지원</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Chrome / Edge</td><td>80+</td><td><span class="check">✅</span></td><td><span class="check">✅</span></td><td><span class="check">✅ 완전 지원</span></td></tr>
+          <tr><td>Firefox</td><td>75+</td><td><span class="check">✅</span></td><td><span class="check">✅</span></td><td><span class="check">✅ 완전 지원</span></td></tr>
+          <tr><td>Safari</td><td>14+</td><td><span class="check">✅</span></td><td><span class="check">✅</span></td><td><span class="check">✅ 완전 지원</span></td></tr>
+          <tr><td>Samsung Internet</td><td>13+</td><td><span class="check">✅</span></td><td><span class="check">✅</span></td><td><span class="check">✅ 완전 지원</span></td></tr>
+          <tr><td>Internet Explorer</td><td>11</td><td><span class="check">✅</span></td><td><span class="cross">❌</span></td><td>⚠️ 부분 지원</td></tr>
+        </tbody>
+      </table>
+
+      <!-- 개인정보 보호 -->
+      <h2 class="section-title">🔒 개인정보 보호</h2>
+      <p>
+        XP Image Tools는 사용자의 개인정보 보호를 최우선으로 설계되었습니다. 이미지에는 가족 사진,
+        업무 문서, 개인 정보가 담긴 사진 등 민감한 내용이 포함될 수 있습니다. 이러한 이미지가
+        외부 서버로 전송되는 것은 심각한 개인정보 침해가 될 수 있습니다.
+      </p>
+
+      <div class="success-box">
+        <p>
+          ✅ <strong>XP Image Tools의 개인정보 보호 약속:</strong>
+        </p>
+        <ul style="margin-top:8px;margin-bottom:0;">
+          <li>업로드된 이미지는 사용자의 브라우저 메모리에만 존재합니다.</li>
+          <li>이미지 데이터는 외부 서버로 전송되지 않습니다.</li>
+          <li>처리 완료 후 브라우저 탭을 닫으면 모든 데이터가 완전히 삭제됩니다.</li>
+          <li>쿠키를 통한 사용자 추적을 하지 않습니다.</li>
+          <li>회원가입이나 개인정보 입력이 필요 없습니다.</li>
+          <li>처리 기록이나 이미지 목록이 저장되지 않습니다.</li>
+        </ul>
+      </div>
+
+      <h3 class="sub-title">다른 온라인 도구와의 비교</h3>
+      <table class="compare-table">
+        <thead>
+          <tr><th>항목</th><th>XP Image Tools</th><th>일반 온라인 도구</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>이미지 서버 전송</td><td><span class="check">✅ 없음</span></td><td><span class="cross">❌ 서버 업로드 필요</span></td></tr>
+          <tr><td>개인정보 수집</td><td><span class="check">✅ 없음</span></td><td><span class="cross">❌ 이메일 등 수집 가능</span></td></tr>
+          <tr><td>서버 저장</td><td><span class="check">✅ 없음</span></td><td><span class="cross">❌ 일정 기간 서버 보관</span></td></tr>
+          <tr><td>회원가입</td><td><span class="check">✅ 불필요</span></td><td><span class="cross">❌ 가입 필요 가능성</span></td></tr>
+          <tr><td>오프라인 사용</td><td><span class="check">✅ 가능 (캐시 후)</span></td><td><span class="cross">❌ 인터넷 필수</span></td></tr>
+          <tr><td>처리 속도</td><td><span class="check">✅ 즉시 처리</span></td><td>⚠️ 업로드 대기 시간</td></tr>
+        </tbody>
+      </table>
+
+      <!-- 성능 최적화 -->
+      <h2 class="section-title">🚀 성능 최적화</h2>
+      <p>
+        XP Image Tools는 Core Web Vitals 지표를 고려하여 최적화되었습니다. 빠른 로딩, 안정적인 레이아웃,
+        반응성 있는 인터랙션을 목표로 개발되었습니다.
+      </p>
+      <ul>
+        <li><strong>서드파티 라이브러리 없음:</strong> 외부 JavaScript 라이브러리를 사용하지 않아 초기 로딩이 빠릅니다.</li>
+        <li><strong>비동기 처리:</strong> 이미지 변환 중 UI가 멈추지 않도록 <code>requestAnimationFrame</code>과 비동기 처리를 활용합니다.</li>
+        <li><strong>메모리 관리:</strong> Object URL을 사용 후 즉시 <code>revokeObjectURL()</code>로 해제하여 메모리 누수를 방지합니다.</li>
+        <li><strong>최소한의 CSS:</strong> 순수 CSS로 Windows XP 스타일을 구현하여 불필요한 렌더링 부하가 없습니다.</li>
+        <li><strong>반응형 디자인:</strong> 모바일, 태블릿, 데스크탑 환경에서 모두 최적화된 화면을 제공합니다.</li>
+      </ul>
+
+      <h2 class="section-title">📐 이미지 크기 변경 상세 기능</h2>
+      <p>
+        이미지 크기 변경 도구는 단순한 리사이즈 이상의 기능을 제공합니다. 입력 가능한 최대 해상도는 8000×8000픽셀이며, 최소 1×1픽셀까지 자유롭게 조절 가능합니다.
+      </p>
+      <ul>
+        <li><strong>비율 유지 (종횡비 고정):</strong> 체크 시 가로 값 변경만으로 세로 값이 자동 계산됩니다. 인물 사진, 제품 사진 등 비율을 유지해야 하는 경우에 유용합니다.</li>
+        <li><strong>빠른 크기 선택:</strong> FHD(1920×1080), HD(1280×720), 800×600, VGA(640×480), 200×200 중 한 번에 선택 가능합니다.</li>
+        <li><strong>다양한 출력 형식:</strong> 원본 유지, JPG, PNG, WEBP 중 선택 가능합니다.</li>
+        <li><strong>품질 조절:</strong> JPG·WEBP 출력 시 10~100% 사이에서 품질을 세밀하게 조절할 수 있습니다.</li>
+        <li><strong>파일명 자동 생성:</strong> 원본파일명-resized-가로x세로.확장자 형식으로 자동 생성되어 기존 파일을 덮어쓸 위험이 없습니다.</li>
+      </ul>
+
+      <h2 class="section-title">📦 이미지 압축 상세 기능</h2>
+      <p>
+        이미지 압축 도구는 파일 크기를 줄이면서도 화질 손실을 최소화하는 최적의 설정을 찾아줍니다.
+      </p>
+      <ul>
+        <li><strong>자동 압축 모드:</strong> 목표 파일 크기(50KB~1MB)를 선택하면 이진 탐색 알고리즘이 최대 15회 반복을 통해 목표 크기에 가장 가까운 최고 품질을 자동으로 찾습니다.</li>
+        <li><strong>수동 압축 모드:</strong> 품질 슬라이더로 직접 조절합니다. 동일한 원본으로 다양한 품질을 빠르게 비교 테스트할 수 있습니다.</li>
+        <li><strong>실시간 절감률 표시:</strong> 압축 완료 후 원본 대비 몇 % 줄었는지 즉시 확인 가능합니다.</li>
+        <li><strong>PNG 지원:</strong> PNG는 무손실 압축 특성상 품질 설정 없이 그대로 저장됩니다.</li>
+      </ul>
+
+      <h2 class="section-title">🔄 이미지 형식 변환 상세 기능</h2>
+      <p>
+        이미지 형식 변환 도구는 서로 다른 세 가지 이미지 포맷 간의 변환을 지원합니다.
+      </p>
+      <ul>
+        <li><strong>JPG → PNG:</strong> JPG 이미지를 무손실 PNG로 변환합니다. 이후 투명 배경 편집을 위해 PNG 포맷이 필요한 경우 유용합니다.</li>
+        <li><strong>JPG → WEBP:</strong> 웹사이트에서 사용할 이미지를 WEBP로 변환하여 페이지 로딩 속도를 높입니다. 동일 품질 기준 JPG 대비 약 25~35% 파일 크기가 감소합니다.</li>
+        <li><strong>PNG → JPG:</strong> 투명 배경이 필요 없는 PNG 이미지를 JPG로 변환하여 파일 크기를 줄입니다. 투명 픽셀은 흰색 배경으로 변환됩니다.</li>
+        <li><strong>PNG → WEBP:</strong> 투명 배경을 유지하면서 파일 크기를 크게 줄일 수 있습니다. 아이콘, 로고, UI 에셋에 적합합니다.</li>
+        <li><strong>WEBP → JPG/PNG:</strong> WEBP를 지원하지 않는 환경을 위해 범용 포맷으로 변환합니다.</li>
+      </ul>
+
+      <h2 class="section-title">🖱️ 파일 입력 방법</h2>
+      <p>세 가지 도구 모두 동일한 방식으로 이미지를 입력할 수 있습니다.</p>
+      <ul>
+        <li><strong>파일 선택 버튼:</strong> 버튼 클릭 후 탐색기/파인더에서 파일을 선택합니다.</li>
+        <li><strong>드래그 앤 드롭:</strong> 파일 탐색기에서 이미지 파일을 드롭존으로 직접 드래그합니다. 직관적이고 빠릅니다.</li>
+        <li><strong>클립보드 붙여넣기 (Ctrl+V):</strong> 스크린샷이나 다른 프로그램에서 복사한 이미지를 바로 붙여넣기할 수 있습니다. 스크린샷 처리에 매우 유용합니다.</li>
+      </ul>
+
+    </div>
+
+    <footer style="background:#ECE9D8;border-top:1px solid #D4D0C8;padding:8px 16px;font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#666;display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;">
+      <span>© 2025 XP Image Tools · protebe2022@gmail.com</span>
+      <span><a href="about.html" style="color:#3169C6;text-decoration:none;">사이트 소개</a> · <a href="features.html" style="color:#3169C6;text-decoration:none;">기능 소개</a> · <a href="guide.html" style="color:#3169C6;text-decoration:none;">사용 가이드</a> · <a href="faq.html" style="color:#3169C6;text-decoration:none;">자주 묻는 질문</a> · <a href="contact.html" style="color:#3169C6;text-decoration:none;">문의</a> · <a href="privacy.html" style="color:#3169C6;text-decoration:none;">개인정보처리방침</a> · <a href="terms.html" style="color:#3169C6;text-decoration:none;">이용약관</a></span>
+      </footer>
+
+  </article>
+</div>
+</div>
+</body>
+</html>

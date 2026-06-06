@@ -1,0 +1,619 @@
+/* ============================================
+   XP Image Tools - Common CSS
+   공통 레이아웃, 배경, 작업 표시줄, 시작 메뉴
+   ============================================ */
+
+/* ── 리셋 & 기본 ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Tahoma', 'Microsoft Sans Serif', Arial, sans-serif;
+  font-size: 11px;
+}
+
+/* ── XP 배경화면 ── */
+body {
+  background-color: #3A6EA5;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% 110%, #1A6030 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 20% 100%, #1E7A3A 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, #158228 0%, transparent 45%),
+    linear-gradient(180deg,
+      #5B8FC9 0%,
+      #6498D4 15%,
+      #4A8FC4 30%,
+      #3E90C0 45%,
+      #48A0C0 55%,
+      #3AA080 65%,
+      #2E9060 75%,
+      #2A7840 85%,
+      #1E6030 100%
+    );
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* 구름 효과 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 400px 120px at 25% 20%, rgba(255,255,255,0.35) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 100px at 70% 15%, rgba(255,255,255,0.28) 0%, transparent 70%),
+    radial-gradient(ellipse 200px 80px at 55% 28%, rgba(255,255,255,0.20) 0%, transparent 70%),
+    radial-gradient(ellipse 350px 90px at 10% 35%, rgba(255,255,255,0.18) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── 데스크탑 영역 ── */
+#desktop {
+  position: fixed;
+  inset: 0 0 40px 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ── 광고 영역 (AdSense placeholder) ── */
+.ad-placeholder {
+  display: none; /* 광고 코드 삽입 시 block으로 변경 */
+  background: rgba(255,255,255,0.1);
+  border: 1px dashed rgba(255,255,255,0.3);
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 10px;
+  padding: 4px;
+}
+
+.ad-top    { position: fixed; top: 0; left: 0; right: 0; height: 90px; z-index: 10; }
+.ad-bottom { position: fixed; bottom: 40px; left: 0; right: 0; height: 90px; z-index: 10; }
+.ad-side   { position: fixed; right: 0; top: 90px; bottom: 130px; width: 120px; z-index: 10; }
+
+/* ── 작업 표시줄 ── */
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(180deg,
+    #245EDC 0%,
+    #2466E0 8%,
+    #1C58D4 15%,
+    #1A52CC 30%,
+    #1648B8 50%,
+    #1240A8 75%,
+    #0E3898 100%
+  );
+  border-top: 1px solid #1B78F5;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.4);
+}
+
+/* ── 시작 버튼 ── */
+#start-btn {
+  height: 36px;
+  margin: 2px 4px;
+  padding: 0 14px 0 8px;
+  background: linear-gradient(180deg,
+    #5CC040 0%,
+    #3AA828 30%,
+    #288010 60%,
+    #1E6808 100%
+  );
+  border: 1px solid #0C5008;
+  border-radius: 0 14px 14px 0;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset -1px 0 0 rgba(0,0,0,0.2),
+    0 0 8px rgba(80,200,50,0.4);
+  flex-shrink: 0;
+  transition: filter 0.1s;
+  outline: none;
+}
+
+#start-btn:hover {
+  background: linear-gradient(180deg,
+    #70D050 0%,
+    #50C038 30%,
+    #389020 60%,
+    #2A7810 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.4),
+    0 0 12px rgba(100,220,70,0.5);
+}
+
+#start-btn:active, #start-btn.active {
+  background: linear-gradient(180deg,
+    #288010 0%,
+    #3AA828 50%,
+    #5CC040 100%
+  );
+}
+
+.start-btn-logo {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* ── 작업 표시줄 - 시계/트레이 ── */
+#taskbar-tray {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 100%;
+  border-left: 1px solid rgba(255,255,255,0.15);
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#taskbar-clock {
+  color: white;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  white-space: nowrap;
+  cursor: default;
+  line-height: 1.4;
+  min-width: 60px;
+}
+
+/* ── 작업 표시줄 - 열린 창 목록 ── */
+#taskbar-windows {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  padding: 0 6px;
+  overflow: hidden;
+}
+
+.taskbar-window-btn {
+  height: 28px;
+  max-width: 160px;
+  min-width: 80px;
+  padding: 0 8px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.15) 0%,
+    rgba(255,255,255,0.05) 100%
+  );
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 3px;
+  color: white;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.taskbar-window-btn:hover {
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.25) 0%,
+    rgba(255,255,255,0.12) 100%
+  );
+}
+
+.taskbar-window-btn.active {
+  background: linear-gradient(180deg,
+    rgba(0,0,0,0.2) 0%,
+    rgba(255,255,255,0.1) 100%
+  );
+  box-shadow:
+    inset 1px 1px 2px rgba(0,0,0,0.3),
+    0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* ── 시작 메뉴 ── */
+#start-menu {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  width: 380px;
+  background: white;
+  border: 2px solid #1A46A8;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 4px -4px 16px rgba(0,0,0,0.5);
+  z-index: 2000;
+  display: none;
+  overflow: hidden;
+  font-family: 'Tahoma', Arial, sans-serif;
+}
+
+#start-menu.visible { display: block; }
+
+/* 시작 메뉴 - 사용자 헤더 */
+.start-menu-header {
+  background: linear-gradient(90deg, #1A52C8 0%, #3A80F0 100%);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+}
+
+.start-menu-user-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #8CC0F0 0%, #4888D8 100%);
+  border: 2px solid white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.start-menu-username {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* 시작 메뉴 본문 */
+.start-menu-body {
+  display: flex;
+  height: calc(100% - 54px - 38px);
+  min-height: 300px;
+}
+
+.start-menu-left {
+  flex: 1;
+  background: white;
+  border-right: 1px solid #C0C0C0;
+  padding: 4px 0;
+  min-width: 0;
+}
+
+.start-menu-right {
+  width: 160px;
+  background: #E8F0F8;
+  padding: 4px 0;
+  flex-shrink: 0;
+}
+
+/* 시작 메뉴 구분선 */
+.start-menu-sep {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C0C0C0 20%, #C0C0C0 80%, transparent);
+  margin: 4px 8px;
+}
+
+/* 시작 메뉴 아이템 */
+.start-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #000;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.start-menu-item:hover {
+  background: var(--xp-highlight, #316AC5);
+  color: white;
+}
+
+.start-menu-item .menu-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.start-menu-item.small .menu-icon {
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+}
+
+.start-menu-item .menu-label { font-weight: bold; font-size: 11px; }
+.start-menu-item .menu-desc  { font-size: 10px; color: #666; margin-top: 1px; }
+.start-menu-item:hover .menu-desc { color: rgba(255,255,255,0.8); }
+
+.start-menu-item .menu-text { flex: 1; min-width: 0; overflow: hidden; }
+
+/* 시작 메뉴 - 우측 섹션 제목 */
+.start-menu-section-title {
+  font-size: 10px;
+  color: #1A52C8;
+  font-weight: bold;
+  padding: 8px 12px 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 시작 메뉴 - 하단 버튼 */
+.start-menu-footer {
+  background: linear-gradient(90deg, #1A52C8 0%, #3A80F0 100%);
+  padding: 4px 8px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  min-height: 38px;
+  align-items: center;
+}
+
+.start-menu-footer-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 3px;
+  color: white;
+  padding: 3px 12px;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.start-menu-footer-btn:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.8);
+}
+
+/* ── 데스크탑 아이콘 ── */
+.desktop-icon {
+  position: absolute;
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.desktop-icon:hover {
+  background: rgba(49,106,197,0.3);
+}
+
+.desktop-icon .icon-img {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.desktop-icon .icon-label {
+  color: white;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  word-break: break-word;
+  line-height: 1.3;
+  max-width: 68px;
+}
+
+.desktop-icon .icon-label span {
+  background: transparent;
+}
+
+.desktop-icon:focus .icon-label span,
+.desktop-icon.selected .icon-label span {
+  background: rgba(49,106,197,0.8);
+  color: white;
+  outline: 1px dotted white;
+}
+
+/* ── 메인 창 컨테이너 ── */
+#main-window {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 760px;
+  max-width: calc(100vw - 20px);
+  min-width: 320px;
+  z-index: 100;
+}
+
+/* ── 콘텐츠 영역 ── */
+.xp-window-content {
+  padding: 10px;
+  background: var(--xp-silver, #ECE9D8);
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+/* ── 드래그 가능한 창 ── */
+.draggable-window {
+  position: absolute;
+  z-index: 100;
+  min-width: 320px;
+}
+
+.draggable-window .xp-titlebar {
+  cursor: move;
+}
+
+/* ── 업로드 드롭존 ── */
+.xp-dropzone {
+  border: 2px dashed var(--xp-border-dark, #808080);
+  background: white;
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.xp-dropzone:hover,
+.xp-dropzone.dragover {
+  background: #EEF4FF;
+  border-color: var(--xp-highlight, #316AC5);
+}
+
+.xp-dropzone-icon { font-size: 40px; }
+.xp-dropzone-text { font-family: 'Tahoma', Arial, sans-serif; font-size: 12px; color: #333; }
+.xp-dropzone-sub  { font-family: 'Tahoma', Arial, sans-serif; font-size: 10px; color: #666; }
+
+/* ── 이미지 미리보기 ── */
+.preview-container {
+  background: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 160px;
+  border: 2px inset var(--xp-border-dark, #808080);
+  position: relative;
+}
+
+.preview-container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.preview-placeholder {
+  color: #C0C0C0;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ── 폼 레이아웃 ── */
+.xp-form-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.xp-form-label {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  color: #000;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.xp-form-value {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ── 알림 / 메시지 박스 ── */
+.xp-msgbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 5000;
+  display: none;
+}
+
+.xp-msgbox-overlay.visible { display: flex; align-items: center; justify-content: center; }
+
+.xp-msgbox {
+  background: var(--xp-silver, #ECE9D8);
+  border: 2px solid #1A46A8;
+  border-radius: 6px 6px 4px 4px;
+  min-width: 260px;
+  max-width: 400px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.5);
+}
+
+.xp-msgbox-body {
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.xp-msgbox-icon { font-size: 32px; flex-shrink: 0; }
+.xp-msgbox-text { font-family: 'Tahoma', Arial, sans-serif; font-size: 11px; line-height: 1.5; }
+.xp-msgbox-footer {
+  padding: 8px 16px;
+  text-align: center;
+  border-top: 1px solid var(--xp-silver-dark, #D4D0C8);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ── 반응형 ── */
+@media (max-width: 800px) {
+  #main-window {
+    top: 10px;
+    width: calc(100vw - 10px);
+    left: 5px;
+    transform: none;
+  }
+  #start-menu { width: min(380px, 100vw); }
+  .start-menu-right { display: none; }
+  .xp-window-content { max-height: calc(100vh - 120px); }
+}
+
+@media (max-width: 480px) {
+  #taskbar { height: 36px; }
+  #start-btn { height: 32px; font-size: 12px; }
+  #desktop { bottom: 36px; }
+  #start-menu { bottom: 36px; }
+  .ad-bottom { bottom: 36px; }
+}
+
+/* ── 접근성 ── */
+*:focus-visible {
+  outline: 2px solid #000080;
+  outline-offset: 1px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}

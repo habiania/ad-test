@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>사용 가이드 - 이미지 크기변경·압축·변환 방법 | XP Image Tools</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="XP Image Tools">
+  <meta name="theme-color" content="#1F5EBF">
+  <link rel="icon" type="image/x-icon"  href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon-180.png">
+  <meta property="og:type"  content="website">
+  <meta property="og:image" content="https://xp-image-tools.pages.dev/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:image" content="https://xp-image-tools.pages.dev/og-image.png">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/xp-theme.css">
+  <meta name="description" content="XP Image Tools 사용 가이드. 이미지 크기 변경, 압축, PNG·JPG·WEBP 변환 방법을 단계별로 쉽게 안내합니다. SNS별 최적 크기, 웹 최적화 팁 포함.">
+  <meta name="keywords" content="이미지 크기 변경 방법, 이미지 압축 방법, PNG JPG WEBP 변환 방법, 이미지 편집 가이드, SNS 이미지 크기">
+  <meta property="og:title"       content="사용 가이드">
+  <meta property="og:description" content="XP Image Tools 사용 가이드. 이미지 크기 변경, 압축, PNG·JPG·WEBP 변환 방법을 단계별로 쉽게 안내합니다. SNS별 최적 크기, 웹 최적화 팁 포함.">
+  <meta property="og:url"         content="https://xp-image-tools.pages.dev/pages/guide.html">
+  <link rel="canonical" href="https://xp-image-tools.pages.dev/pages/guide.html">
+  <link rel="alternate" hreflang="ko" href="https://xp-image-tools.pages.dev/pages/guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://xp-image-tools.pages.dev/pages/guide.html">
+
+  <style>
+    body { overflow: auto; background: #ECE9D8; }
+    #desktop { position: static; overflow: visible; }
+    .page-wrapper { max-width: 860px; margin: 0 auto; padding: 20px 16px 80px; }
+    .page-window {
+      background: #ECE9D8; border: 2px solid #1A46A8;
+      border-radius: 8px 8px 4px 4px;
+      box-shadow: 4px 4px 16px rgba(0,0,0,0.3); overflow: hidden;
+      font-family: 'Tahoma', Arial, sans-serif;
+    }
+    .titlebar {
+      background: linear-gradient(180deg,#1F5EBF 0%,#2B7BDB 8%,#2564C1 92%,#1A4D9E 100%);
+      padding: 4px 8px; display:flex; align-items:center; gap:8px;
+      color:white; font-size:12px; font-weight:bold; user-select:none;
+    }
+    .titlebar-icon { font-size:14px; }
+    .page-nav {
+      background:#ECE9D8; border-bottom:1px solid #D4D0C8;
+      padding:6px 16px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+      font-size:11px;
+    }
+    .page-nav a { color:#3169C6; text-decoration:none; }
+    .page-nav a:hover { text-decoration:underline; }
+    .page-nav .sep { color:#999; }
+    .page-content { padding:22px 28px; background:white; }
+    h1.page-title {
+      font-size:18px; color:#0A246A; margin:0 0 6px;
+      border-bottom:2px solid #3169C6; padding-bottom:8px;
+    }
+    .page-subtitle { font-size:11px; color:#666; margin-bottom:18px; }
+    h2.section-title {
+      font-size:14px; color:#1A52C8; margin:22px 0 8px;
+      display:flex; align-items:center; gap:6px;
+      border-left:3px solid #3169C6; padding-left:8px;
+    }
+    h3.sub-title { font-size:12px; color:#333; font-weight:bold; margin:14px 0 5px; }
+    p  { font-size:12px; line-height:1.85; color:#333; margin-bottom:10px; }
+    ul, ol { font-size:12px; line-height:1.85; color:#333; margin-bottom:10px; padding-left:22px; }
+    li { margin-bottom:5px; }
+    strong { color:#1A3A7A; }
+    .highlight-box {
+      background:#EEF4FF; border:1px solid #B0C8F0;
+      border-left:4px solid #3169C6;
+      padding:12px 16px; margin:14px 0; border-radius:0 4px 4px 0;
+    }
+    .highlight-box p { margin:0; }
+    .warn-box {
+      background:#FFF8E8; border:1px solid #E0C870;
+      border-left:4px solid #C8960C;
+      padding:12px 16px; margin:14px 0; border-radius:0 4px 4px 0;
+    }
+    .warn-box p { margin:0; }
+    .tip-box {
+      background:#F0FFF0; border:1px solid #90D090;
+      border-left:4px solid #30A030;
+      padding:12px 16px; margin:14px 0; border-radius:0 4px 4px 0;
+    }
+    .tip-box p { margin:0; }
+    .card-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+      gap:12px; margin:14px 0;
+    }
+    .card {
+      background:#F5F3E8; border:1px solid #D0CDB8; border-radius:6px;
+      padding:14px; text-align:center;
+    }
+    .card .icon { font-size:30px; margin-bottom:8px; }
+    .card .ctitle { font-size:12px; font-weight:bold; color:#1A3A7A; margin-bottom:5px; }
+    .card .cdesc  { font-size:10px; color:#666; line-height:1.6; }
+    .step-list { counter-reset:step; padding-left:0; list-style:none; }
+    .step-list li {
+      counter-increment:step; padding:10px 12px 10px 46px;
+      position:relative; border-bottom:1px solid #E8E5D8;
+      font-size:12px; line-height:1.7;
+    }
+    .step-list li:last-child { border-bottom:none; }
+    .step-list li::before {
+      content:counter(step); position:absolute; left:10px; top:50%;
+      transform:translateY(-50%); width:24px; height:24px;
+      background:#3169C6; color:white; font-weight:bold; font-size:11px;
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      line-height:24px; text-align:center;
+    }
+    .faq-item {
+      border:1px solid #D4D0C8; border-radius:4px; margin-bottom:10px; overflow:hidden;
+    }
+    .faq-q {
+      background:#F5F3E8; padding:10px 14px; font-size:12px;
+      font-weight:bold; color:#1A3A7A; cursor:pointer;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .faq-q:hover { background:#ECE9D8; }
+    .faq-a {
+      padding:12px 14px; font-size:12px; line-height:1.8;
+      color:#333; background:white; border-top:1px solid #D4D0C8;
+    }
+    .info-table { width:100%; border-collapse:collapse; font-size:11px; margin:10px 0; }
+    .info-table th { background:#3169C6; color:white; padding:7px 10px; text-align:left; }
+    .info-table td { padding:7px 10px; border:1px solid #D0CDB8; }
+    .info-table tr:nth-child(even) td { background:#F5F3E8; }
+    .contact-card {
+      background:#F5F3E8; border:1px solid #D0CDB8; border-radius:6px;
+      padding:16px 20px; margin:12px 0;
+      display:flex; align-items:flex-start; gap:14px;
+    }
+    .contact-card .icon { font-size:28px; flex-shrink:0; margin-top:2px; }
+    .contact-card .info h3 { font-size:13px; color:#1A3A7A; margin:0 0 4px; }
+    .contact-card .info p  { font-size:11px; color:#555; margin:0; line-height:1.7; }
+    .contact-card .info a  { color:#3169C6; }
+    .form-row { margin-bottom:12px; }
+    .form-label { display:block; font-size:11px; font-weight:bold; color:#333; margin-bottom:4px; }
+    .form-input, .form-textarea, .form-select {
+      width:100%; box-sizing:border-box;
+      font-family:'Tahoma',Arial,sans-serif; font-size:12px;
+      padding:6px 8px; border:1px solid #B0B0B0; border-radius:2px;
+      background:white; color:#333;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline:none; border-color:#3169C6;
+      box-shadow:0 0 0 2px rgba(49,105,198,0.2);
+    }
+    .form-textarea { resize:vertical; min-height:120px; }
+    .form-submit {
+      background:linear-gradient(180deg,#3A7BDB 0%,#1F5EBF 100%);
+      color:white; border:1px solid #1A4D9E; border-radius:3px;
+      padding:8px 24px; font-family:'Tahoma',Arial,sans-serif; font-size:12px;
+      font-weight:bold; cursor:pointer;
+    }
+    .form-submit:hover { background:linear-gradient(180deg,#4A8BEB 0%,#2F6ECF 100%); }
+    .form-note { font-size:10px; color:#888; margin-top:4px; }
+    .page-footer {
+      background:#ECE9D8; border-top:1px solid #D4D0C8;
+      padding:10px 16px; font-size:10px; color:#666;
+      display:flex; justify-content:space-between; flex-wrap:wrap; gap:4px;
+    }
+    .page-footer a { color:#3169C6; text-decoration:none; }
+    .page-footer a:hover { text-decoration:underline; }
+    @media(max-width:600px){
+      .page-content { padding:14px 16px; }
+      .card-grid { grid-template-columns:1fr 1fr; }
+      .contact-card { flex-direction:column; gap:8px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "이미지 크기 변경, 압축, 형식 변환 방법",
+    "description": "XP Image Tools를 이용하여 이미지를 크기 변경, 압축, 형식 변환하는 방법",
+    "tool": {"@type": "HowToTool", "name": "XP Image Tools"},
+    "step": [
+      {"@type":"HowToStep","name":"이미지 업로드","text":"파일 선택 버튼, 드래그 앤 드롭, 또는 Ctrl+V로 이미지를 업로드합니다."},
+      {"@type":"HowToStep","name":"설정 조절","text":"원하는 크기, 압축 수준, 출력 형식을 선택합니다."},
+      {"@type":"HowToStep","name":"처리 실행","text":"실행 버튼을 클릭하면 브라우저에서 즉시 처리됩니다."},
+      {"@type":"HowToStep","name":"결과 다운로드","text":"미리보기로 결과를 확인한 후 다운로드 버튼을 클릭합니다."}
+    ]
+  }
+  </script>
+  <!-- Google Analytics 4 -->
+  <!-- TODO: GA_MEASUREMENT_ID를 실제 측정 ID(G-XXXXXXXXXX)로 교체하세요 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "GA_MEASUREMENT_ID");
+  </script>
+</head>
+<body>
+<div id="desktop">
+<div class="page-wrapper">
+  <article class="page-window">
+
+    <div class="titlebar">
+      <span class="titlebar-icon">📖</span>
+      <span>XP Image Tools — 사용 가이드</span>
+    </div>
+
+    <nav class="page-nav" aria-label="사이트 내비게이션">
+      <a href="../index.html">🏠 홈</a><span class="sep">·</span><a href="about.html">사이트 소개</a><span class="sep">·</span><a href="features.html">기능 소개</a><span class="sep">·</span><span style="color:#333;font-weight:bold;">사용 가이드</span><span class="sep">·</span><a href="faq.html">자주 묻는 질문</a><span class="sep">·</span><a href="contact.html">문의</a><span class="sep">·</span><a href="privacy.html">개인정보처리방침</a><span class="sep">·</span><a href="terms.html">이용약관</a>
+    </nav>
+
+    <div class="page-content">
+      <h1 class="page-title">📖 사용 가이드</h1>
+      <p class="page-subtitle">XP Image Tools의 각 기능을 단계별로 쉽게 따라할 수 있도록 안내합니다.</p>
+
+      <div class="highlight-box">
+        <p>💡 <strong>핵심 원칙:</strong> 모든 이미지 처리는 여러분의 브라우저에서 직접 실행됩니다. 이미지가 서버로 전송되지 않으므로 안심하고 사용하세요.</p>
+      </div>
+
+      <h2 class="section-title">📥 이미지 업로드 방법 (공통)</h2>
+      <p>세 가지 도구(크기 변경·압축·형식 변환) 모두 동일한 방식으로 이미지를 입력합니다.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon">📁</div>
+          <div class="ctitle">파일 선택</div>
+          <div class="cdesc">「파일 선택」 버튼 클릭 → 탐색기에서 JPG/PNG/WEBP 파일 선택</div>
+        </div>
+        <div class="card">
+          <div class="icon">🖱️</div>
+          <div class="ctitle">드래그 앤 드롭</div>
+          <div class="cdesc">파일 탐색기에서 이미지를 드래그하여 점선 영역에 드롭</div>
+        </div>
+        <div class="card">
+          <div class="icon">📋</div>
+          <div class="ctitle">클립보드 붙여넣기</div>
+          <div class="cdesc">스크린샷 등 복사한 이미지를 Ctrl+V로 바로 붙여넣기</div>
+        </div>
+      </div>
+
+      <h2 class="section-title">🖼️ 이미지 크기 변경 가이드</h2>
+      <p>이미지의 가로·세로 픽셀을 원하는 크기로 조절합니다. SNS 업로드 규격, 이메일 첨부, 웹사이트 이미지 최적화 등에 활용하세요.</p>
+
+      <ul class="step-list">
+        <li>홈 화면의 시작 메뉴에서 <strong>「🖼 이미지 크기 변경」</strong>을 클릭하거나, 데스크탑의 이미지 아이콘을 더블클릭합니다.</li>
+        <li>이미지를 업로드합니다. 원본 이미지의 가로·세로 픽셀과 파일 크기가 표시됩니다.</li>
+        <li><strong>가로(W)</strong> 또는 <strong>세로(H)</strong> 값을 입력합니다. <strong>「비율 유지」</strong> 체크 시 한쪽만 입력해도 나머지가 자동 계산됩니다.</li>
+        <li>빠른 크기 선택 버튼(FHD·HD·800·VGA·200²)으로 자주 쓰는 크기를 한 번에 선택할 수도 있습니다.</li>
+        <li>출력 형식(원본 유지·JPG·PNG·WEBP)을 선택하고, JPG·WEBP는 품질 슬라이더를 조절합니다.</li>
+        <li><strong>「⚡ 크기 변경 실행」</strong> 버튼을 클릭합니다. 결과 미리보기가 우측에 나타납니다.</li>
+        <li><strong>「💾 다운로드」</strong> 버튼을 클릭하면 <em>원본파일명-resized-가로x세로.확장자</em> 형식으로 저장됩니다.</li>
+      </ul>
+
+      <div class="tip-box">
+        <p>✅ <strong>화질 팁:</strong> 크게 축소할 때는 PNG 출력이 가장 선명합니다. JPG는 품질 85% 이상이면 육안으로 구분하기 어렵습니다.</p>
+      </div>
+
+      <h2 class="section-title">📦 이미지 압축 가이드</h2>
+      <p>파일 크기를 줄이되 화질은 최대한 유지합니다. 이메일 첨부 용량 제한, SNS 파일 크기 제한, 웹사이트 로딩 속도 개선에 효과적입니다.</p>
+
+      <ul class="step-list">
+        <li>시작 메뉴에서 <strong>「📦 이미지 압축」</strong>을 선택합니다.</li>
+        <li>이미지를 업로드합니다. 원본 파일 크기가 표시됩니다.</li>
+        <li>압축 방식을 선택합니다.
+          <ul>
+            <li><strong>자동 모드:</strong> 목표 크기(50KB / 100KB / 200KB / 500KB / 1MB)를 선택합니다. 알고리즘이 자동으로 최적 품질을 찾아줍니다.</li>
+            <li><strong>수동 모드:</strong> 품질 슬라이더(10~99%)를 직접 조절합니다.</li>
+          </ul>
+        </li>
+        <li>출력 형식(JPG·WEBP·PNG)을 선택합니다. WEBP가 가장 높은 압축률을 제공합니다.</li>
+        <li><strong>「⚡ 압축 실행」</strong>을 클릭합니다. 우측에 압축된 미리보기와 절감률(%)이 표시됩니다.</li>
+        <li>만족스러우면 <strong>「💾 다운로드」</strong>로 저장합니다.</li>
+      </ul>
+
+      <div class="tip-box">
+        <p>✅ <strong>압축 팁:</strong> 사진 파일은 JPG 품질 75~85%, 웹 이미지는 WEBP 형식이 크기 대비 화질이 가장 우수합니다.</p>
+      </div>
+
+      <h2 class="section-title">🔄 이미지 형식 변환 가이드</h2>
+      <p>PNG ↔ JPG ↔ WEBP를 자유롭게 변환합니다. 각 형식의 특성에 맞게 목적에 따라 선택하세요.</p>
+
+      <table class="info-table">
+        <thead><tr><th>형식</th><th>특징</th><th>권장 용도</th></tr></thead>
+        <tbody>
+          <tr><td><strong>JPG</strong></td><td>손실 압축 · 파일 작음 · 투명 배경 미지원</td><td>사진, 블로그 이미지</td></tr>
+          <tr><td><strong>PNG</strong></td><td>무손실 압축 · 투명 배경 지원 · 파일 큼</td><td>로고, 아이콘, UI 요소</td></tr>
+          <tr><td><strong>WEBP</strong></td><td>최신 포맷 · 가장 작음 · 투명 배경 지원</td><td>웹사이트 이미지, SNS</td></tr>
+        </tbody>
+      </table>
+
+      <ul class="step-list">
+        <li>시작 메뉴에서 변환할 형식(PNG 변환 / JPG 변환 / WEBP 변환)을 선택하거나, 변환 도구에서 상단 탭으로 변경합니다.</li>
+        <li>이미지를 업로드합니다. 원본 형식·크기가 표시됩니다.</li>
+        <li>JPG·WEBP 출력 시 품질 슬라이더를 조절합니다(PNG는 무손실이라 별도 설정 없음).</li>
+        <li><strong>「⚡ 변환 실행」</strong>을 클릭합니다. 우측에 변환 결과 미리보기와 크기 변화가 표시됩니다.</li>
+        <li><strong>「💾 다운로드」</strong>로 저장합니다. 파일명은 원본파일명.변환형식 으로 자동 생성됩니다.</li>
+      </ul>
+
+      <div class="warn-box">
+        <p>⚠️ <strong>주의:</strong> JPG로 변환 시 투명 배경(알파 채널)은 흰색으로 채워집니다. 투명 배경을 유지해야 한다면 PNG 또는 WEBP로 변환하세요.</p>
+      </div>
+
+      <h2 class="section-title">💡 활용 팁 모음</h2>
+
+      <h3 class="sub-title">📸 SNS별 최적 이미지 크기</h3>
+      <table class="info-table">
+        <thead><tr><th>플랫폼</th><th>권장 크기</th><th>형식</th></tr></thead>
+        <tbody>
+          <tr><td>인스타그램 정방형</td><td>1080×1080px</td><td>JPG</td></tr>
+          <tr><td>인스타그램 스토리</td><td>1080×1920px</td><td>JPG</td></tr>
+          <tr><td>유튜브 썸네일</td><td>1280×720px</td><td>JPG</td></tr>
+          <tr><td>페이스북 커버</td><td>1640×624px</td><td>JPG</td></tr>
+          <tr><td>네이버 블로그 본문</td><td>최대 1200px 폭</td><td>JPG/WEBP</td></tr>
+          <tr><td>카카오톡 공유</td><td>800×400px 이상</td><td>JPG</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-title">📧 이메일 첨부 팁</h3>
+      <p>대부분의 이메일 서비스는 첨부 파일 합계 25MB 이하를 권장합니다. 사진 여러 장을 보낼 때는 자동 압축 모드에서 각 파일을 200~500KB로 압축하면 빠르게 전송할 수 있습니다.</p>
+
+      <h3 class="sub-title">🌐 웹사이트 이미지 최적화 팁</h3>
+      <p>웹사이트 로딩 속도는 SEO와 사용자 경험 모두에 영향을 줍니다. 웹 이미지는 WEBP 형식으로 변환하고, 파일 크기는 100~300KB 이하로 유지하는 것을 권장합니다. 배경 이미지나 히어로 이미지는 1920px, 일반 본문 이미지는 1200px 이하로 크기를 조절하세요.</p>
+
+      <h3 class="sub-title">🖨️ 인쇄용 이미지 팁</h3>
+      <p>인쇄용 이미지는 해상도보다 픽셀 크기가 중요합니다. A4 사이즈(300DPI 기준)에서는 2480×3508px, 명함 크기에서는 1063×591px이 필요합니다. PNG 무손실 형식으로 저장하면 화질 손실 없이 인쇄할 수 있습니다.</p>
+
+
+      <h2 class="section-title">📱 실전 사용 시나리오</h2>
+      <h3 class="sub-title">시나리오 1: 인스타그램 정방형 사진 만들기</h3>
+      <p>인스타그램 피드에 올릴 정방형(1:1 비율) 이미지를 만드는 방법입니다. 이미지 크기 변경 도구에서 비율 유지를 해제하고 가로 1080, 세로 1080을 입력합니다. 출력 형식은 JPG를 선택하고 품질은 90%로 설정합니다. 이렇게 하면 인스타그램 권장 해상도인 1080×1080px 이미지가 완성됩니다.</p>
+      <h3 class="sub-title">시나리오 2: 이메일 첨부용 사진 압축하기</h3>
+      <p>회사 이메일 서버가 첨부 파일을 10MB로 제한하는 경우를 예로 들겠습니다. 스마트폰으로 찍은 10MB짜리 사진을 이메일에 첨부하려면 압축이 필요합니다. 압축 도구에서 자동 모드를 선택하고 목표 크기를 500KB로 설정합니다. 실행하면 약 95% 이상 용량이 줄어들면서도 충분히 선명한 사진이 유지됩니다.</p>
+      <h3 class="sub-title">시나리오 3: 웹사이트용 WEBP 이미지 만들기</h3>
+      <p>워드프레스나 개인 홈페이지에 올릴 이미지를 WEBP로 변환하면 페이지 로딩 속도를 크게 개선할 수 있습니다. 형식 변환 도구에서 WEBP를 선택하고 품질 85%로 설정합니다. 일반적으로 JPG 대비 25~35% 파일 크기가 줄어들어 SEO 점수 향상에도 도움이 됩니다.</p>
+      <h3 class="sub-title">시나리오 4: 발표 자료용 PNG 로고 만들기</h3>
+      <p>PowerPoint나 Keynote에 삽입할 투명 배경 로고가 필요한 경우, PNG 형식으로 변환하면 됩니다. 형식 변환 도구에서 PNG를 선택하면 투명 배경이 그대로 유지됩니다. JPG로 변환하면 투명 부분이 흰색으로 채워지므로 로고는 반드시 PNG로 저장하세요.</p>
+
+      <h2 class="section-title">📊 화질과 파일 크기 가이드</h2>
+      <table class="info-table">
+        <thead><tr><th>용도</th><th>권장 크기</th><th>형식</th><th>품질</th></tr></thead>
+        <tbody>
+          <tr><td>인스타그램 피드</td><td>1080×1080px</td><td>JPG</td><td>90%</td></tr>
+          <tr><td>유튜브 썸네일</td><td>1280×720px</td><td>JPG</td><td>90%</td></tr>
+          <tr><td>블로그 본문 이미지</td><td>최대 1200px 폭</td><td>WEBP/JPG</td><td>80~85%</td></tr>
+          <tr><td>이메일 첨부</td><td>800~1200px 폭</td><td>JPG</td><td>75%</td></tr>
+          <tr><td>카카오톡 공유</td><td>800×400px 이상</td><td>JPG</td><td>85%</td></tr>
+          <tr><td>웹사이트 배경</td><td>1920×1080px</td><td>WEBP</td><td>80%</td></tr>
+          <tr><td>투명 로고/아이콘</td><td>원본 크기</td><td>PNG</td><td>무손실</td></tr>
+          <tr><td>프린트(A4 300DPI)</td><td>2480×3508px</td><td>PNG</td><td>무손실</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title">⌨️ 단축키 및 편의 기능</h2>
+      <ul>
+        <li><strong>Ctrl+V (클립보드 붙여넣기):</strong> 도구 패널이 열려 있는 상태에서 스크린샷이나 복사한 이미지를 바로 붙여넣기할 수 있습니다.</li>
+        <li><strong>드래그 앤 드롭:</strong> 파일 탐색기에서 이미지를 점선 박스로 드래그하면 즉시 로드됩니다.</li>
+        <li><strong>초기화 버튼:</strong> 새 이미지를 처리하려면 초기화 버튼을 클릭하여 처음 상태로 돌아가세요.</li>
+        <li><strong>시작 메뉴:</strong> 화면 좌하단의 XP 스타일 시작 버튼을 클릭하면 모든 도구에 빠르게 접근할 수 있습니다.</li>
+      </ul>
+
+      <h2 class="section-title">🔧 문제 해결</h2>
+      <h3 class="sub-title">이미지가 업로드되지 않을 때</h3>
+      <ul>
+        <li>지원 형식(JPG, PNG, WEBP)인지 확인하세요.</li>
+        <li>브라우저를 최신 버전으로 업데이트하세요.</li>
+        <li>Chrome 또는 Firefox 사용을 권장합니다.</li>
+        <li>파일이 30MB 이하인지 확인하세요.</li>
+      </ul>
+      <h3 class="sub-title">다운로드가 되지 않을 때</h3>
+      <ul>
+        <li>브라우저의 팝업 차단 설정을 확인하고 이 사이트의 팝업을 허용해 주세요.</li>
+        <li>주소창 옆의 차단 아이콘을 클릭하여 허용으로 변경하세요.</li>
+      </ul>
+      <h3 class="sub-title">처리 결과가 예상과 다를 때</h3>
+      <ul>
+        <li>비율 유지 옵션 체크 여부를 확인하세요.</li>
+        <li>출력 형식과 품질 설정을 다시 확인하세요.</li>
+        <li>문제가 지속되면 <a href="contact.html">문의 페이지</a>로 알려주세요.</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p>❓ 사용 중 궁금한 점은 <a href="faq.html">자주 묻는 질문</a>이나 <a href="contact.html">문의 페이지</a>를 이용해 주세요.</p>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <span>© 2025 XP Image Tools · 무료 이미지 편집 도구 · protebe2022@gmail.com</span>
+      <span><a href="about.html">사이트 소개</a> · <a href="features.html">기능 소개</a> · <a href="guide.html">사용 가이드</a> · <a href="faq.html">자주 묻는 질문</a> · <a href="contact.html">문의</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></span>
+    </footer>
+  </article>
+</div>
+</div>
+</body>
+</html>

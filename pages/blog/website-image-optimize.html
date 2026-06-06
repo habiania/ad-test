@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹사이트 이미지 최적화로 로딩 속도 2배 빠르게 만드는 법 | XP Image Tools</title>
+  <meta name="description" content="웹사이트 로딩 속도를 높이는 이미지 최적화 방법. WEBP 변환, 크기 조절, 압축 설정, Core Web Vitals 개선까지 실용적인 가이드를 제공합니다.">
+  <meta name="keywords" content="웹사이트 이미지 최적화, 홈페이지 로딩 속도, Core Web Vitals, 웹이미지 압축, SEO 이미지 최적화">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="XP Image Tools">
+  <meta name="theme-color" content="#1F5EBF">
+  <link rel="canonical" href="https://xp-image-tools.pages.dev/pages/blog/website-image-optimize.html">
+  <link rel="alternate" hreflang="ko" href="https://xp-image-tools.pages.dev/pages/blog/website-image-optimize.html">
+  <link rel="alternate" hreflang="x-default" href="https://xp-image-tools.pages.dev/pages/blog/website-image-optimize.html">
+  <meta property="og:type"         content="article">
+  <meta property="og:title"        content="웹사이트 이미지 최적화로 로딩 속도 2배 빠르게 만드는 법">
+  <meta property="og:description"  content="웹사이트 로딩 속도를 높이는 이미지 최적화 방법. WEBP 변환, 크기 조절, 압축 설정, Core Web Vitals 개선까지 실용적인 가이드를 제공합니다.">
+  <meta property="og:url"          content="https://xp-image-tools.pages.dev/pages/blog/website-image-optimize.html">
+  <meta property="og:image"        content="https://xp-image-tools.pages.dev/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:image" content="https://xp-image-tools.pages.dev/og-image.png">
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon-180.png">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/xp-theme.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://xp-image-tools.pages.dev/pages/blog/website-image-optimize.html",
+    "headline": "웹사이트 이미지 최적화로 로딩 속도 2배 빠르게 만드는 법",
+    "description": "웹사이트 로딩 속도를 높이는 이미지 최적화 방법. WEBP 변환, 크기 조절, 압축 설정, Core Web Vitals 개선까지 실용적인 가이드를 제공합니다.",
+    "url": "https://xp-image-tools.pages.dev/pages/blog/website-image-optimize.html",
+    "datePublished": "2025-06-06",
+    "dateModified": "2025-06-06",
+    "inLanguage": "ko-KR",
+    "author": {"@type": "Organization", "name": "XP Image Tools"},
+    "publisher": {"@type": "Organization", "name": "XP Image Tools", "url": "https://xp-image-tools.pages.dev"},
+    "image": "https://xp-image-tools.pages.dev/og-image.png",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xp-image-tools.pages.dev/pages/blog/website-image-optimize.html"}
+  }
+  </script>
+  <style>
+    body { overflow:auto; background:#ECE9D8; }
+    #desktop { position:static; overflow:visible; }
+    .page-wrapper { max-width:860px; margin:0 auto; padding:20px 16px 80px; }
+    .page-window { background:#ECE9D8; border:2px solid #1A46A8; border-radius:8px 8px 4px 4px; box-shadow:4px 4px 16px rgba(0,0,0,0.3); overflow:hidden; font-family:'Tahoma',Arial,sans-serif; }
+    .titlebar { background:linear-gradient(180deg,#1F5EBF 0%,#2B7BDB 8%,#2564C1 92%,#1A4D9E 100%); padding:4px 8px; display:flex; align-items:center; gap:8px; color:white; font-size:12px; font-weight:bold; user-select:none; }
+    .page-nav { background:#ECE9D8; border-bottom:1px solid #D4D0C8; padding:6px 16px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font-size:11px; font-family:'Tahoma',Arial,sans-serif; }
+    .page-nav a { color:#3169C6; text-decoration:none; } .page-nav a:hover { text-decoration:underline; }
+    .page-content { padding:22px 28px; background:white; }
+    .article-meta { font-size:11px; color:#888; margin-bottom:18px; display:flex; gap:12px; flex-wrap:wrap; }
+    .article-meta span { display:flex; align-items:center; gap:4px; }
+    h1.page-title { font-size:20px; color:#0A246A; margin:0 0 8px; line-height:1.4; }
+    h2.section-title { font-size:14px; color:#1A52C8; margin:24px 0 10px; border-left:3px solid #3169C6; padding-left:8px; }
+    h3.sub-title { font-size:12px; color:#1A3A7A; font-weight:bold; margin:14px 0 5px; }
+    p { font-size:12px; line-height:1.9; color:#333; margin-bottom:12px; }
+    ul, ol { font-size:12px; line-height:1.9; color:#333; margin-bottom:12px; padding-left:22px; }
+    li { margin-bottom:6px; } strong { color:#1A3A7A; }
+    .highlight-box { background:#EEF4FF; border:1px solid #B0C8F0; border-left:4px solid #3169C6; padding:14px 18px; margin:16px 0; border-radius:0 4px 4px 0; }
+    .highlight-box p { margin:0; }
+    .tip-box { background:#F0FFF0; border:1px solid #90D090; border-left:4px solid #30A030; padding:14px 18px; margin:16px 0; border-radius:0 4px 4px 0; }
+    .tip-box p { margin:0; }
+    .warn-box { background:#FFF8E8; border:1px solid #E0C870; border-left:4px solid #C8960C; padding:14px 18px; margin:16px 0; border-radius:0 4px 4px 0; }
+    .warn-box p { margin:0; }
+    .info-table { width:100%; border-collapse:collapse; font-size:11px; margin:12px 0; }
+    .info-table th { background:#3169C6; color:white; padding:8px 10px; text-align:left; }
+    .info-table td { padding:8px 10px; border:1px solid #D0CDB8; }
+    .info-table tr:nth-child(even) td { background:#F5F3E8; }
+    .cta-box { background:linear-gradient(135deg,#EEF4FF,#E8F0FF); border:2px solid #3169C6; border-radius:6px; padding:18px 22px; margin:20px 0; text-align:center; }
+    .cta-box p { margin:0 0 10px; font-size:13px; font-weight:bold; color:#0A246A; }
+    .cta-box a { display:inline-block; background:#3169C6; color:white; text-decoration:none; padding:8px 22px; border-radius:3px; font-size:12px; font-weight:bold; }
+    .related-posts { background:#F5F3E8; border:1px solid #D0CDB8; border-radius:4px; padding:14px 18px; margin-top:24px; }
+    .related-posts h3 { font-size:12px; color:#1A3A7A; margin:0 0 10px; }
+    .related-posts ul { margin:0; padding-left:18px; }
+    .related-posts li { margin-bottom:4px; font-size:11px; }
+    .related-posts a { color:#3169C6; text-decoration:none; }
+    .related-posts a:hover { text-decoration:underline; }
+    .page-footer { background:#ECE9D8; border-top:1px solid #D4D0C8; padding:10px 16px; font-size:10px; color:#666; display:flex; justify-content:space-between; flex-wrap:wrap; gap:4px; }
+    .page-footer a { color:#3169C6; text-decoration:none; }
+    @media(max-width:600px){ .page-content { padding:14px 16px; } }
+  </style>
+  <!-- Google Analytics 4 -->
+  <!-- TODO: GA_MEASUREMENT_ID를 실제 측정 ID(G-XXXXXXXXXX)로 교체하세요 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "GA_MEASUREMENT_ID");
+  </script>
+</head>
+<body>
+<div id="desktop">
+<div class="page-wrapper">
+  <article class="page-window">
+    <div class="titlebar"><span>📝</span><span>XP Image Tools 블로그</span></div>
+    <nav class="page-nav" aria-label="사이트 내비게이션"><a href="../../index.html">🏠 홈</a> <span style="color:#999">·</span> <a href="../about.html">사이트 소개</a> <span style="color:#999">·</span> <a href="../features.html">기능 소개</a> <span style="color:#999">·</span> <a href="../guide.html">사용 가이드</a> <span style="color:#999">·</span> <a href="../faq.html">자주 묻는 질문</a> <span style="color:#999">·</span> <a href="index.html">블로그</a> <span style="color:#999">·</span> <a href="../contact.html">문의</a></nav>
+    <div class="page-content">
+      <h1 class="page-title">웹사이트 이미지 최적화로 로딩 속도 2배 빠르게 만드는 법</h1>
+      <div class="article-meta">
+        <span>📅 2025-06-06</span>
+        <span>⏱️ 읽는 시간 약 6분</span>
+        <span>✍️ XP Image Tools 팀</span>
+      </div>
+
+      <p>구글은 페이지 로딩 속도를 SEO 랭킹 요소로 사용합니다. 웹사이트에서 이미지는 전체 데이터의 평균 50~70%를 차지하는 가장 큰 로딩 병목 요소입니다. 이미지 최적화만 제대로 해도 로딩 속도를 2배 이상 높일 수 있습니다.</p>
+
+      <h2 class="section-title">📊 이미지가 웹사이트 속도에 미치는 영향</h2>
+      <p>Google PageSpeed Insights에 따르면 최적화되지 않은 이미지는 페이지 로딩 속도를 평균 2~5초 지연시킵니다. 연구에 따르면 로딩 속도가 1초 느려질 때마다 전환율이 7% 감소하고, 3초 이상 걸리면 방문자의 53%가 페이지를 떠납니다.</p>
+
+      <h2 class="section-title">✅ 웹사이트 이미지 최적화 체크리스트</h2>
+      <h3 class="sub-title">1. 올바른 이미지 형식 선택</h3>
+      <ul>
+        <li><strong>사진류:</strong> WEBP (지원 안 할 경우 JPG 폴백)</li>
+        <li><strong>로고·아이콘·투명 배경:</strong> PNG 또는 SVG</li>
+        <li><strong>애니메이션:</strong> WebM 또는 APNG</li>
+        <li><strong>단순 도형·로고:</strong> SVG (벡터, 해상도 무관)</li>
+      </ul>
+      <h3 class="sub-title">2. 적절한 이미지 크기</h3>
+      <p>실제 표시 크기보다 큰 이미지를 로드하는 것은 낭비입니다. 예를 들어 300px 폭으로 표시되는 썸네일에 1920px 이미지를 사용하면 6배 이상의 데이터를 낭비합니다.</p>
+      <table class="info-table">
+        <thead><tr><th>위치</th><th>권장 최대 폭</th></tr></thead>
+        <tbody>
+          <tr><td>히어로 배경 이미지</td><td>1920px</td></tr>
+          <tr><td>본문 이미지</td><td>1200px</td></tr>
+          <tr><td>사이드바 이미지</td><td>400px</td></tr>
+          <tr><td>썸네일</td><td>300~400px</td></tr>
+          <tr><td>아이콘</td><td>64~128px (또는 SVG)</td></tr>
+        </tbody>
+      </table>
+      <h3 class="sub-title">3. 적절한 압축 품질</h3>
+      <ul>
+        <li><strong>히어로 이미지:</strong> WEBP 80~85%</li>
+        <li><strong>일반 본문 이미지:</strong> WEBP 75~80%</li>
+        <li><strong>썸네일:</strong> WEBP 70~75%</li>
+        <li><strong>목표 파일 크기:</strong> 100KB 이하 (썸네일), 300KB 이하 (본문)</li>
+      </ul>
+      <h3 class="sub-title">4. alt 텍스트 입력</h3>
+      <p>모든 이미지에 의미 있는 alt 텍스트를 입력하세요. 검색 엔진이 이미지 내용을 이해하는 데 도움이 되며, 접근성도 향상됩니다.</p>
+
+      <h2 class="section-title">🛠️ XP Image Tools로 웹 이미지 최적화하기</h2>
+      <p>웹사이트에 올릴 이미지는 다음 워크플로우를 따라 최적화하세요.</p>
+      <ol style="font-size:12px;line-height:1.9;padding-left:22px;">
+        <li><strong>크기 조절:</strong> 이미지 크기 변경 도구로 실제 표시 크기에 맞게 조절 (예: 본문 이미지는 최대 1200px)</li>
+        <li><strong>WEBP 변환:</strong> 형식 변환 도구에서 WEBP로 변환</li>
+        <li><strong>압축:</strong> 압축 도구에서 자동 모드로 100~300KB 목표 압축</li>
+        <li><strong>확인:</strong> 미리보기로 화질 확인 후 다운로드</li>
+      </ol>
+      <div class="tip-box">
+        <p>✅ <strong>실전 결과:</strong> 이 과정을 거치면 일반적으로 원본 대비 85~95% 파일 크기 감소 효과를 볼 수 있습니다.</p>
+      </div>
+
+      <h2 class="section-title">📈 Core Web Vitals와 이미지</h2>
+      <p>구글의 Core Web Vitals 지표 중 이미지와 관련된 항목은 다음과 같습니다.</p>
+      <ul>
+        <li><strong>LCP (Largest Contentful Paint):</strong> 가장 큰 콘텐츠(보통 히어로 이미지)가 로드되는 시간. 2.5초 이하가 Good 등급.</li>
+        <li><strong>CLS (Cumulative Layout Shift):</strong> 이미지 로드 시 레이아웃 이동. width/height 속성을 명시하면 방지 가능.</li>
+      </ul>
+      <p>이미지를 최적화하면 LCP 점수가 크게 개선됩니다. 히어로 이미지를 WEBP로 최적화하고 300KB 이하로 줄이면 LCP를 Good 등급으로 만드는 데 큰 도움이 됩니다.</p>
+
+      <div class="related-posts">
+        <h3>📚 관련 글</h3>
+        <ul>
+          <li><a href="webp-convert-guide.html">WEBP 이미지 변환 완벽 가이드 — 파일 크기 30% 줄이기</a></li>
+          <li><a href="image-compress-tips.html">이미지 압축 완벽 가이드 — 화질 손실 없이 용량 90% 줄이기</a></li>
+          <li><a href="png-jpg-difference.html">PNG vs JPG 차이점 완벽 정리</a></li>
+        </ul>
+      </div>
+
+      <h2 class="section-title">🔧 WordPress 사용자를 위한 이미지 최적화</h2>
+      <p>WordPress 블로그를 운영한다면 이미지 최적화 플러그인을 함께 사용하는 것을 권장합니다. 대표적인 플러그인으로는 Smush, ShortPixel, Imagify 등이 있습니다. 이런 플러그인들은 업로드된 이미지를 자동으로 압축하고 WEBP로 변환해줍니다. 하지만 서버 측에서 처리하는 방식이므로 업로드 전에 XP Image Tools로 미리 최적화하면 서버 부하를 줄일 수 있습니다.</p>
+      <h2 class="section-title">📱 반응형 이미지 처리</h2>
+      <p>모바일 사용자를 위해 반응형 이미지를 준비하는 것이 좋습니다. HTML의 srcset 속성을 사용하면 화면 크기에 따라 적절한 해상도의 이미지를 로드할 수 있습니다. 예를 들어 데스크탑용 1200px, 태블릿용 800px, 모바일용 400px 세 가지 버전을 준비하세요. XP Image Tools로 각 크기별 이미지를 미리 만들어두면 편리합니다.</p>
+      <h2 class="section-title">📈 이미지 최적화 전후 성능 비교</h2>
+      <table class="info-table">
+        <thead><tr><th>항목</th><th>최적화 전</th><th>최적화 후</th></tr></thead>
+        <tbody>
+          <tr><td>이미지 총 용량 (10장 기준)</td><td>15MB</td><td>1.5MB</td></tr>
+          <tr><td>페이지 로딩 시간</td><td>8~12초</td><td>1~3초</td></tr>
+          <tr><td>LCP 점수</td><td>Poor (5초+)</td><td>Good (1.5초)</td></tr>
+          <tr><td>모바일 PageSpeed 점수</td><td>30~50점</td><td>80~95점</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cta-box">
+        <p>🚀 지금 바로 무료로 이미지를 편집해 보세요!</p>
+        <a href="../../index.html">XP Image Tools 시작하기</a>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <span>© 2025 XP Image Tools · protebe2022@gmail.com</span>
+      <span><a href="../about.html">소개</a> · <a href="../guide.html">가이드</a> · <a href="../faq.html">FAQ</a> · <a href="../contact.html">문의</a> · <a href="../privacy.html">개인정보</a> · <a href="../terms.html">약관</a></span>
+    </footer>
+  </article>
+</div>
+</div>
+</body>
+</html>
