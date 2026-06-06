@@ -1,111 +1,91 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XP Image Tools - 무료 온라인 이미지 편집 도구 | 크기변경·압축·변환</title>
-  <meta name="description" content="XP Image Tools는 브라우저에서 바로 사용하는 무료 이미지 편집 도구입니다. 이미지 크기 변경, 압축, PNG·JPG·WEBP 형식 변환을 서버 전송 없이 안전하게 처리합니다. 회원가입 불필요.">
-  <meta name="keywords" content="이미지 크기 변경, 이미지 압축, 이미지 변환, PNG 변환, JPG 변환, WEBP 변환, 이미지 리사이즈, 온라인 이미지 편집, 무료 이미지 툴, 사진 압축, 이미지 용량 줄이기, 이미지 포맷 변환">
-  
-  <meta name="google-site-verification" content="GOOGLE_SITE_VERIFICATION_CODE">
-  
-  <meta name="naver-site-verification" content="dbdebf66a53872322b6890f753a3138350cff56e" />
 
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="author" content="XP Image Tools">
-  <meta name="theme-color" content="#1F5EBF">
-  <link rel="canonical" href="https://livingnote.kr/">
-  <link rel="alternate" hreflang="ko" href="https://livingnote.kr/">
-  <link rel="alternate" hreflang="x-default" href="https://livingnote.kr/">
+<meta name="naver-site-verification" content="dbdebf66a53872322b6890f753a3138350cff56e" />
+            <!-- 설정 그리드 -->
+            <div class="settings-grid">
 
-  <meta property="og:type"        content="website">
-  <meta property="og:title"       content="XP Image Tools - 무료 온라인 이미지 편집">
-  <meta property="og:description" content="브라우저에서 직접 처리하는 무료 이미지 편집 도구. 개인정보 수집 없음, 서버 전송 없음.">
-  <meta property="og:url"         content="https://livingnote.kr/">
-  <meta property="og:site_name"   content="XP Image Tools">
-  <meta property="og:locale"      content="ko_KR">
+              <!-- 크기 설정 -->
+              <div class="xp-groupbox" role="group" aria-labelledby="size-group-title">
+                <span class="xp-groupbox-title" id="size-group-title">크기 설정</span>
 
-  <meta name="twitter:title"       content="XP Image Tools - 무료 온라인 이미지 편집">
-  <meta name="twitter:description" content="브라우저에서 직접 처리하는 무료 이미지 편집 도구.">
+                <div class="xp-form-row size-input-row">
+                  <label class="xp-form-label" for="resize-width">가로</label>
+                  <input type="number" id="resize-width" class="xp-input" min="1" max="8000"
+                         placeholder="1920" disabled aria-label="가로 픽셀 크기">
+                  <span class="size-px">px</span>
+                </div>
 
-  <link rel="icon" type="image/x-icon"  href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+                <div class="xp-form-row size-input-row">
+                  <label class="xp-form-label" for="resize-height">세로</label>
+                  <input type="number" id="resize-height" class="xp-input" min="1" max="8000"
+                         placeholder="1080" disabled aria-label="세로 픽셀 크기">
+                  <span class="size-px">px</span>
+                </div>
 
-  <meta property="og:image"        content="https://livingnote.kr/og-image.png">
-  <meta property="og:image:width"  content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:image"       content="https://livingnote.kr/og-image.png">
+                <div class="xp-form-row ratio-row">
+                  <label class="xp-checkbox-wrap" for="keep-ratio">
+                    <input type="checkbox" id="keep-ratio" class="xp-checkbox" checked
+                           aria-label="비율 유지">
+                    비율 유지
+                  </label>
+                </div>
 
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/xp-theme.css">
-</head>
+                <!-- 빠른 크기 선택 -->
+                <div style="margin-top:6px;">
+                  <div style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#666;margin-bottom:4px;">빠른 선택:</div>
+                  <div style="display:flex;gap:4px;flex-wrap:wrap;">
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="1920,1080" aria-label="1920×1080으로 설정">FHD</button>
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="1280,720"  aria-label="1280×720으로 설정">HD</button>
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="800,600"   aria-label="800×600으로 설정">800</button>
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="640,480"   aria-label="640×480으로 설정">VGA</button>
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="200,200"   aria-label="200×200으로 설정">200²</button>
+                  </div>
+                </div>
+              </div>
 
-<body>
-  <div class="settings-grid">
-    <div class="xp-groupbox" role="group" aria-labelledby="size-group-title">
-      <span class="xp-groupbox-title" id="size-group-title">크기 설정</span>
-      <div class="xp-form-row size-input-row">
-        <label class="xp-form-label" for="resize-width">가로</label>
-        <input type="number" id="resize-width" class="xp-input" min="1" max="8000" placeholder="1920" disabled aria-label="가로 픽셀 크기">
-        <span class="size-px">px</span>
-      </div>
-      <div class="xp-form-row size-input-row">
-        <label class="xp-form-label" for="resize-height">세로</label>
-        <input type="number" id="resize-height" class="xp-input" min="1" max="8000" placeholder="1080" disabled aria-label="세로 픽셀 크기">
-        <span class="size-px">px</span>
-      </div>
-      <div class="xp-form-row ratio-row">
-        <label class="xp-checkbox-wrap" for="keep-ratio">
-          <input type="checkbox" id="keep-ratio" class="xp-checkbox" checked aria-label="비율 유지">
-          비율 유지
-        </label>
-      </div>
-      <div style="margin-top:6px;">
-        <div style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#666;margin-bottom:4px;">빠른 선택:</div>
-        <div style="display:flex;gap:4px;flex-wrap:wrap;">
-          <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="1920,1080" aria-label="1920×1080으로 설정">FHD</button>
-          <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="1280,720" aria-label="1280×720으로 설정">HD</button>
-          <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="800,600" aria-label="800×600으로 설정">800</button>
-          <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="640,480" aria-label="640×480으로 설정">VGA</button>
-          <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="200,200" aria-label="200×200으로 설정">200²</button>
-        </div>
-      </div>
-    </div>
-    <div class="xp-groupbox" role="group" aria-labelledby="output-group-title">
-      <span class="xp-groupbox-title" id="output-group-title">출력 설정</span>
-      <div class="xp-form-row format-row">
-        <label class="xp-form-label" for="output-format">형식</label>
-        <select id="output-format" class="xp-select" aria-label="출력 이미지 형식 선택">
-          <option value="same">원본 유지</option>
-          <option value="jpg">JPG</option>
-          <option value="png">PNG</option>
-          <option value="webp">WEBP</option>
-        </select>
-      </div>
-      <div class="xp-form-row" id="quality-wrap">
-        <label class="xp-form-label" for="quality-slider">품질</label>
-        <input type="range" id="quality-slider" class="xp-slider" min="10" max="100" value="92" aria-label="이미지 품질 (10~100%)">
-        <span id="quality-label" style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;min-width:30px;">92%</span>
-      </div>
-      <div style="margin-top:8px;padding:6px;background:#FFF8E8;border:1px solid #D0C080;font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#806000;line-height:1.5;">
-        💡 JPG/WEBP: 품질 조절 가능<br>
-        PNG: 무손실 압축 (품질 설정 없음)
-      </div>
-    </div>
-  </div>
-  <div id="resize-progress" class="xp-progressbar" aria-label="변환 진행 중" aria-live="polite">
-    <div class="xp-progressbar-fill" style="width:100%;"></div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;flex-wrap:wrap;gap:6px;">
-    <div class="btn-group">
-      <button id="resize-btn" class="xp-btn xp-btn-primary" disabled aria-label="이미지 크기 변환 실행">⚡ 변환 실행</button>
-      <button id="download-btn" class="xp-btn" disabled aria-label="변환된 이미지 다운로드">💾 다운로드</button>
-      <button id="reset-btn" class="xp-btn" aria-label="초기화">🔄 초기화</button>
-    </div>
-  </div>
-</body>
-</html>
+              <!-- 출력 설정 -->
+              <div class="xp-groupbox" role="group" aria-labelledby="output-group-title">
+                <span class="xp-groupbox-title" id="output-group-title">출력 설정</span>
+
+                <div class="xp-form-row format-row">
+                  <label class="xp-form-label" for="output-format">형식</label>
+                  <select id="output-format" class="xp-select" aria-label="출력 이미지 형식 선택">
+                    <option value="same">원본 유지</option>
+                    <option value="jpg">JPG</option>
+                    <option value="png">PNG</option>
+                    <option value="webp">WEBP</option>
+                  </select>
+                </div>
+
+                <div class="xp-form-row" id="quality-wrap">
+                  <label class="xp-form-label" for="quality-slider">품질</label>
+                  <input type="range" id="quality-slider" class="xp-slider"
+                         min="10" max="100" value="92"
+                         aria-label="이미지 품질 (10~100%)" aria-valuemin="10" aria-valuemax="100" aria-valuenow="92">
+                  <span id="quality-label" style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;min-width:30px;">92%</span>
+                </div>
+
+                <div style="margin-top:8px;padding:6px;background:#FFF8E8;border:1px solid #D0C080;font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#806000;line-height:1.5;">
+                  💡 JPG/WEBP: 품질 조절 가능<br>
+                  PNG: 무손실 압축 (품질 설정 없음)
+                </div>
+              </div>
+            </div><!-- /settings-grid -->
+
+            <!-- 진행 표시줄 -->
+            <div id="resize-progress" class="xp-progressbar" aria-label="변환 진행 중" aria-live="polite">
+              <div class="xp-progressbar-fill" style="width:100%;"></div>
+            </div>
+
+            <!-- 액션 버튼 -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;flex-wrap:wrap;gap:6px;">
+              <div class="btn-group">
+                <button id="resize-btn" class="xp-btn xp-btn-primary" disabled
+                        aria-label="이미지 크기 변환 실행">
+                  ⚡ 변환 실행
+                </button>
+                <button id="download-btn" class="xp-btn" disabled
+                        aria-label="변환된 이미지 다운로드">
+                  💾 다운로드
+                </button>
+                <button id="reset-btn" class="xp-btn"
