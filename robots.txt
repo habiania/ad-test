@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /404.html
+Disallow: /_redirects
+
+# Google 이미지 봇 허용
+User-agent: Googlebot-Image
+Allow: /
+
+# Sitemap
+Sitemap: https://xp-image-tools.pages.dev/sitemap.xml

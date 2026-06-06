@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XP Image Tools - 무료 온라인 이미지 편집 도구 | 크기변경·압축·변환</title>
+  <meta name="description" content="XP Image Tools는 브라우저에서 바로 사용하는 무료 이미지 편집 도구입니다. 이미지 크기 변경, 압축, PNG·JPG·WEBP 형식 변환을 서버 전송 없이 안전하게 처리합니다. 회원가입 불필요.">
+  <meta name="keywords" content="이미지 크기 변경, 이미지 압축, 이미지 변환, PNG 변환, JPG 변환, WEBP 변환, 이미지 리사이즈, 온라인 이미지 편집, 무료 이미지 툴, 사진 압축, 이미지 용량 줄이기, 이미지 포맷 변환">
+    <!-- Google Search Console 인증 -->
+  <!-- TODO: Search Console에서 발급받은 verification 코드로 교체 -->
+  <meta name="google-site-verification" content="GOOGLE_SITE_VERIFICATION_CODE">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="XP Image Tools">
+  <meta name="theme-color" content="#1F5EBF">
+  <link rel="canonical" href="https://xp-image-tools.pages.dev/">
+  <link rel="alternate" hreflang="ko" href="https://xp-image-tools.pages.dev/">
+  <link rel="alternate" hreflang="x-default" href="https://xp-image-tools.pages.dev/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="XP Image Tools - 무료 온라인 이미지 편집">
+  <meta property="og:description" content="브라우저에서 직접 처리하는 무료 이미지 편집 도구. 개인정보 수집 없음, 서버 전송 없음.">
+  <meta property="og:url"         content="https://xp-image-tools.pages.dev/">
+  <meta property="og:site_name"   content="XP Image Tools">
+  <meta property="og:locale"      content="ko_KR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title"       content="XP Image Tools - 무료 온라인 이미지 편집">
+  <meta name="twitter:description" content="브라우저에서 직접 처리하는 무료 이미지 편집 도구.">
+
+  <!-- JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://xp-image-tools.pages.dev/#webapp",
+        "name": "XP Image Tools",
+        "alternateName": "엑스피 이미지 툴즈",
+        "url": "https://xp-image-tools.pages.dev/",
+        "description": "브라우저에서 직접 처리하는 무료 이미지 편집 도구. 이미지 크기 변경, 압축, PNG/JPG/WEBP 형식 변환을 서버 전송 없이 안전하게 처리합니다.",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Image Editor",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript. Requires HTML5 Canvas.",
+        "softwareVersion": "1.0.0",
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-06-01",
+        "inLanguage": "ko-KR",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW",
+          "availability": "https://schema.org/InStock"
+        },
+        "featureList": [
+          "이미지 크기 변경 (리사이즈)",
+          "이미지 압축 (자동/수동 모드)",
+          "PNG 형식 변환",
+          "JPG 형식 변환",
+          "WEBP 형식 변환",
+          "드래그 앤 드롭 업로드",
+          "클립보드 붙여넣기 지원",
+          "서버 전송 없는 로컬 처리",
+          "비율 유지 리사이즈",
+          "목표 크기 자동 압축"
+        ],
+        "screenshot": "https://xp-image-tools.pages.dev/og-image.png",
+        "image": "https://xp-image-tools.pages.dev/og-image.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "protebe2022@gmail.com",
+          "contactType": "customer support",
+          "availableLanguage": "Korean"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://xp-image-tools.pages.dev/#website",
+        "url": "https://xp-image-tools.pages.dev/",
+        "name": "XP Image Tools",
+        "description": "무료 온라인 이미지 편집 도구",
+        "inLanguage": "ko-KR",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://xp-image-tools.pages.dev/",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "XP Image Tools는 무료인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네, 완전 무료입니다. 회원가입이나 로그인 없이 바로 사용할 수 있으며, 사용 횟수 제한도 없습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "이미지를 서버로 업로드하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아니요. 모든 이미지 처리는 사용자의 브라우저에서만 이루어집니다. 이미지 데이터는 절대 외부 서버로 전송되지 않습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "지원하는 이미지 형식은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "JPG(JPEG), PNG, WEBP 형식을 지원합니다. 세 형식 모두 서로 자유롭게 변환할 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "이미지 크기 변경 시 화질이 저하되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "단계적 리샘플링(Stepwise Resampling) 기법을 사용하여 화질 저하를 최소화합니다. PNG 출력 시 무손실 저장이 가능합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "모바일에서도 사용할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 반응형 디자인으로 스마트폰, 태블릿, 데스크탑 모든 환경에서 사용 가능합니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon"  href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+
+  <!-- og:image -->
+  <meta property="og:image"        content="https://xp-image-tools.pages.dev/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:image"       content="https://xp-image-tools.pages.dev/og-image.png">
+
+  <!-- 스타일 -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/xp-theme.css">
+
+  <style>
+    /* ── 인라인 보완 스타일 ── */
+
+    /* 리사이즈 에디터 패널 */
+    #resize-editor { display: none; }
+
+    /* 미리보기 그리드 */
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 560px) { .preview-grid { grid-template-columns: 1fr; } }
+
+    .preview-panel { display: flex; flex-direction: column; gap: 4px; }
+    .preview-panel-title {
+      font-family: 'Tahoma', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .preview-container {
+      background: #404040;
+      border: 2px inset #808080;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
+      max-height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    .preview-container img {
+      max-width: 100%;
+      max-height: 196px;
+      object-fit: contain;
+      display: none;
+    }
+    .preview-placeholder {
+      color: #A0A0A0;
+      font-family: 'Tahoma', Arial, sans-serif;
+      font-size: 11px;
+      text-align: center;
+      padding: 16px;
+    }
+
+    /* 크기 레이블 */
+    .size-label-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--xp-silver-dark, #D4D0C8);
+      border: 1px solid #A0A0A0;
+      padding: 2px 6px;
+      font-family: 'Tahoma', Arial, sans-serif;
+      font-size: 10px;
+      color: #333;
+      min-height: 18px;
+      text-align: center;
+    }
+
+    /* 설정 패널 */
+    .settings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    @media (max-width: 480px) { .settings-grid { grid-template-columns: 1fr; } }
+
+    /* 크기 입력 행 */
+    .size-input-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .size-input-row .xp-form-label { min-width: 28px; font-size: 11px; }
+    .size-input-row .xp-input { width: 80px; }
+    .size-px { font-family: 'Tahoma', Arial, sans-serif; font-size: 10px; color: #666; }
+
+    /* 상태 텍스트 */
+    .xp-status-text {
+      font-family: 'Tahoma', Arial, sans-serif;
+      font-size: 10px;
+      flex: 1;
+    }
+    .status-ok    { color: #006000; }
+    .status-error { color: #CC0000; }
+    .status-info  { color: #000080; }
+
+    /* 진행 표시줄 */
+    #resize-progress { display: none; margin: 4px 0; }
+
+    /* 버튼 그룹 */
+    .btn-group {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* 품질 슬라이더 */
+    #quality-wrap { display: flex; align-items: center; gap: 6px; }
+    .xp-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100px;
+      height: 4px;
+      background: white;
+      border: 1px inset #808080;
+      outline: none;
+    }
+    .xp-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 20px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #ECE9D8 40%, #C8C5B8 100%);
+      border: 1px solid #716F64;
+      cursor: pointer;
+    }
+    .xp-slider::-moz-range-thumb {
+      width: 12px;
+      height: 20px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #ECE9D8 40%, #C8C5B8 100%);
+      border: 1px solid #716F64;
+      cursor: pointer;
+    }
+
+    /* SEO 텍스트 블록 */
+    .seo-section {
+      background: rgba(255,255,255,0.12);
+      padding: 16px;
+      margin: 8px;
+      border-radius: 4px;
+      color: rgba(255,255,255,0.9);
+      font-family: 'Tahoma', Arial, sans-serif;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+    .seo-section h2 {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: white;
+    }
+    .seo-section p { margin-bottom: 8px; }
+    .seo-section ul { padding-left: 18px; }
+    .seo-section li { margin-bottom: 3px; }
+
+    /* 그룹박스 내부 패딩 보완 */
+    .xp-groupbox .xp-form-row:last-child { margin-bottom: 0; }
+
+    /* 체크박스 레이아웃 */
+    .ratio-row { margin: 6px 0; }
+
+    /* 포맷 레이블 */
+    .format-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .format-row .xp-form-label { min-width: 60px; }
+
+    /* 광고 플레이스홀더 */
+    .ad-inline {
+      background: rgba(255,255,255,0.08);
+      border: 1px dashed rgba(255,255,255,0.25);
+      text-align: center;
+      padding: 8px;
+      margin: 8px 0;
+      font-family: 'Tahoma', Arial, sans-serif;
+      font-size: 9px;
+      color: rgba(255,255,255,0.3);
+      border-radius: 2px;
+    }
+    /* 변환 포맷 버튼 활성 상태 */
+    .convert-fmt-btn.active {
+      background: linear-gradient(180deg,#1B5EBF 0%,#2B7BDB 100%);
+      color: white;
+      border-color: #1A4D9E;
+    }
+
+    /* 절감 배지 */
+    .saving-badge {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 9px;
+      font-weight: bold;
+      font-family: 'Tahoma', Arial, sans-serif;
+    }
+    .badge-good { background: #006000; color: #fff; }
+    .badge-warn { background: #CC6600; color: #fff; }
+  </style>
+  <!-- Google Analytics 4 -->
+  <!-- TODO: GA_MEASUREMENT_ID를 실제 측정 ID(G-XXXXXXXXXX)로 교체하세요 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "GA_MEASUREMENT_ID");
+  </script>
+</head>
+
+<body>
+<!-- 광고 영역 placeholder (상단) -->
+<div class="ad-placeholder ad-top" role="complementary" aria-label="광고 영역"></div>
+
+<!-- 데스크탑 -->
+<div id="desktop" role="main">
+
+  <!-- ── 데스크탑 아이콘 ── -->
+  <div class="desktop-icon" style="top:16px;left:16px" tabindex="0" role="button" aria-label="이미지 크기 변경 열기" data-action="resize">
+    <div class="icon-img" aria-hidden="true">🖼️</div>
+    <div class="icon-label"><span>이미지<br>크기 변경</span></div>
+  </div>
+
+  <div class="desktop-icon" style="top:100px;left:16px" tabindex="0" role="button" aria-label="이미지 압축 열기" data-action="compress">
+    <div class="icon-img" aria-hidden="true">📦</div>
+    <div class="icon-label"><span>이미지<br>압축</span></div>
+  </div>
+
+  <div class="desktop-icon" style="top:184px;left:16px" tabindex="0" role="button" aria-label="이미지 형식 변환 열기" data-action="to-png">
+    <div class="icon-img" aria-hidden="true">🔄</div>
+    <div class="icon-label"><span>형식<br>변환</span></div>
+  </div>
+
+  <div class="desktop-icon" style="top:268px;left:16px" tabindex="0" role="button" aria-label="사이트 소개 열기" data-action="about">
+    <div class="icon-img" aria-hidden="true">📄</div>
+    <div class="icon-label"><span>사이트 소개</span></div>
+  </div>
+
+  <!-- ── 메인 창 ── -->
+  <div id="main-window" class="xp-window draggable-window" role="dialog" aria-labelledby="window-title-text" style="position:absolute;top:20px;left:50%;transform:translateX(-50%);width:760px;max-width:calc(100vw - 20px);">
+
+    <!-- 제목 표시줄 -->
+    <header class="xp-titlebar" role="banner">
+      <div class="xp-titlebar-left">
+        <span class="xp-titlebar-icon" aria-hidden="true">🖼️</span>
+        <span class="xp-titlebar-title" id="window-title-text">이미지 크기 변경 - XP Image Tools</span>
+      </div>
+      <div class="xp-titlebar-buttons" aria-label="창 제어 버튼">
+        <button class="xp-btn-titlebar xp-btn-minimize" data-action="minimize-window" title="최소화" aria-label="최소화">─</button>
+        <button class="xp-btn-titlebar xp-btn-maximize" data-action="maximize-window" title="최대화" aria-label="최대화">□</button>
+        <button class="xp-btn-titlebar xp-btn-close"    data-action="close-window"    title="닫기"   aria-label="닫기">✕</button>
+      </div>
+    </header>
+
+    <!-- 메뉴바 -->
+    <nav class="xp-menubar" role="menubar" aria-label="메뉴">
+      <a class="xp-menu-item" href="pages/about.html"    target="_blank" role="menuitem">사이트 소개</a>
+      <a class="xp-menu-item" href="pages/features.html" target="_blank" role="menuitem">기능 소개</a>
+      <a class="xp-menu-item" href="pages/privacy.html"  target="_blank" role="menuitem">개인정보처리방침</a>
+    </nav>
+
+    <!-- 창 본문 -->
+    <div class="xp-window-body">
+
+      <!-- ── 도구 패널: 이미지 크기 변경 ── -->
+      <section id="tool-resize" class="tool-panel" aria-labelledby="tool-resize-heading">
+        <div class="xp-window-content xp-scrollable">
+
+          <!-- h1 (SEO) -->
+          <h1 style="font-family:'Tahoma',Arial,sans-serif;font-size:13px;margin-bottom:8px;color:#000080;">
+            🖼️ 이미지 크기 변경
+          </h1>
+          <p style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#555;margin-bottom:10px;">
+            JPG, PNG, WEBP 이미지를 업로드하여 원하는 크기로 변경하세요. 모든 처리는 브라우저에서 직접 이루어집니다.
+          </p>
+
+          <!-- 광고 (본문 상단) placeholder -->
+          <div class="ad-inline" aria-hidden="true">광고 영역 · 728×90</div>
+
+          <!-- ① 업로드 드롭존 -->
+          <div id="resize-dropzone" class="xp-dropzone" role="button" tabindex="0"
+               aria-label="이미지 파일을 여기에 드래그하거나 클릭하여 업로드"
+               aria-describedby="dropzone-desc">
+            <div class="xp-dropzone-icon" aria-hidden="true">📂</div>
+            <div class="xp-dropzone-text">이미지를 드래그하거나 클릭하여 업로드</div>
+            <div class="xp-dropzone-sub" id="dropzone-desc">지원 형식: JPG, JPEG, PNG, WEBP · 클립보드 붙여넣기(Ctrl+V) 가능</div>
+            <button class="xp-btn xp-btn-primary" id="resize-upload-btn" style="margin-top:8px;"
+                    aria-label="파일 선택하기">
+              📁 파일 선택
+            </button>
+            <input type="file" id="resize-file-input" accept="image/jpeg,image/png,image/webp"
+                   style="display:none;" aria-hidden="true">
+          </div>
+
+          <!-- ② 에디터 (업로드 후 표시) -->
+          <div id="resize-editor">
+
+            <!-- 미리보기 -->
+            <div class="preview-grid">
+              <div class="preview-panel">
+                <div class="preview-panel-title">원본</div>
+                <div class="preview-container" role="img" aria-label="원본 이미지 미리보기">
+                  <img id="preview-before" alt="원본 이미지" src="">
+                  <div class="preview-placeholder">이미지 로딩 중...</div>
+                </div>
+                <div class="size-label-bar" id="before-size-label" aria-live="polite">—</div>
+              </div>
+              <div class="preview-panel">
+                <div class="preview-panel-title">결과</div>
+                <div class="preview-container" role="img" aria-label="변환 결과 이미지 미리보기">
+                  <img id="preview-after" alt="변환 결과 이미지" src="">
+                  <div class="preview-placeholder">변환 후 표시됩니다</div>
+                </div>
+                <div class="size-label-bar" id="after-size-label" aria-live="polite">—</div>
+              </div>
+            </div>
+
+            <!-- 설정 그리드 -->
+            <div class="settings-grid">
+
+              <!-- 크기 설정 -->
+              <div class="xp-groupbox" role="group" aria-labelledby="size-group-title">
+                <span class="xp-groupbox-title" id="size-group-title">크기 설정</span>
+
+                <div class="xp-form-row size-input-row">
+                  <label class="xp-form-label" for="resize-width">가로</label>
+                  <input type="number" id="resize-width" class="xp-input" min="1" max="8000"
+                         placeholder="1920" disabled aria-label="가로 픽셀 크기">
+                  <span class="size-px">px</span>
+                </div>
+
+                <div class="xp-form-row size-input-row">
+                  <label class="xp-form-label" for="resize-height">세로</label>
+                  <input type="number" id="resize-height" class="xp-input" min="1" max="8000"
+                         placeholder="1080" disabled aria-label="세로 픽셀 크기">
+                  <span class="size-px">px</span>
+                </div>
+
+                <div class="xp-form-row ratio-row">
+                  <label class="xp-checkbox-wrap" for="keep-ratio">
+                    <input type="checkbox" id="keep-ratio" class="xp-checkbox" checked
+                           aria-label="비율 유지">
+                    비율 유지
+                  </label>
+                </div>
+
+                <!-- 빠른 크기 선택 -->
+                <div style="margin-top:6px;">
+                  <div style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#666;margin-bottom:4px;">빠른 선택:</div>
+                  <div style="display:flex;gap:4px;flex-wrap:wrap;">
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="1920,1080" aria-label="1920×1080으로 설정">FHD</button>
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="1280,720"  aria-label="1280×720으로 설정">HD</button>
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="800,600"   aria-label="800×600으로 설정">800</button>
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="640,480"   aria-label="640×480으로 설정">VGA</button>
+                    <button class="xp-btn" style="padding:2px 6px;font-size:10px;" data-preset="200,200"   aria-label="200×200으로 설정">200²</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 출력 설정 -->
+              <div class="xp-groupbox" role="group" aria-labelledby="output-group-title">
+                <span class="xp-groupbox-title" id="output-group-title">출력 설정</span>
+
+                <div class="xp-form-row format-row">
+                  <label class="xp-form-label" for="output-format">형식</label>
+                  <select id="output-format" class="xp-select" aria-label="출력 이미지 형식 선택">
+                    <option value="same">원본 유지</option>
+                    <option value="jpg">JPG</option>
+                    <option value="png">PNG</option>
+                    <option value="webp">WEBP</option>
+                  </select>
+                </div>
+
+                <div class="xp-form-row" id="quality-wrap">
+                  <label class="xp-form-label" for="quality-slider">품질</label>
+                  <input type="range" id="quality-slider" class="xp-slider"
+                         min="10" max="100" value="92"
+                         aria-label="이미지 품질 (10~100%)" aria-valuemin="10" aria-valuemax="100" aria-valuenow="92">
+                  <span id="quality-label" style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;min-width:30px;">92%</span>
+                </div>
+
+                <div style="margin-top:8px;padding:6px;background:#FFF8E8;border:1px solid #D0C080;font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#806000;line-height:1.5;">
+                  💡 JPG/WEBP: 품질 조절 가능<br>
+                  PNG: 무손실 압축 (품질 설정 없음)
+                </div>
+              </div>
+            </div><!-- /settings-grid -->
+
+            <!-- 진행 표시줄 -->
+            <div id="resize-progress" class="xp-progressbar" aria-label="변환 진행 중" aria-live="polite">
+              <div class="xp-progressbar-fill" style="width:100%;"></div>
+            </div>
+
+            <!-- 액션 버튼 -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;flex-wrap:wrap;gap:6px;">
+              <div class="btn-group">
+                <button id="resize-btn" class="xp-btn xp-btn-primary" disabled
+                        aria-label="이미지 크기 변환 실행">
+                  ⚡ 변환 실행
+                </button>
+                <button id="download-btn" class="xp-btn" disabled
+                        aria-label="변환된 이미지 다운로드">
+                  💾 다운로드
+                </button>
+                <button id="reset-btn" class="xp-btn"
+                        aria-label="초기화하고 새 이미지 업로드">
+                  🔄 초기화
+                </button>
+              </div>
+              <div style="font-family:'Tahoma',Arial,sans-serif;font-size:9px;color:#888;">
+                🔒 서버 전송 없음 · 개인정보 보호
+              </div>
+            </div>
+
+          </div><!-- /resize-editor -->
+
+          <!-- 상태 표시줄 -->
+          <div class="xp-statusbar" role="status" aria-live="polite" style="margin-top:8px;">
+            <span class="xp-status-text status-info" id="resize-status">이미지를 업로드하면 시작됩니다.</span>
+          </div>
+
+          <!-- 광고 (본문 하단) placeholder -->
+          <div class="ad-inline" style="margin-top:8px;" aria-hidden="true">광고 영역 · 728×90</div>
+
+        </div><!-- /xp-window-content -->
+      </section>
+
+      <!-- ── 도구 패널: 이미지 압축 ── -->
+      <section id="tool-compress" class="tool-panel" style="display:none;" aria-labelledby="tool-compress-heading">
+        <div class="xp-window-content xp-scrollable">
+
+          <h1 style="font-family:'Tahoma',Arial,sans-serif;font-size:13px;margin-bottom:8px;color:#000080;">
+            📦 이미지 압축
+          </h1>
+          <p style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#555;margin-bottom:10px;">
+            JPG, PNG, WEBP 이미지를 업로드하여 파일 크기를 줄이세요. 목표 크기 자동 최적화 또는 품질 직접 조절 방식을 선택할 수 있습니다.
+          </p>
+
+          <div class="ad-inline" aria-hidden="true">광고 영역 · 728×90</div>
+
+          <!-- 드롭존 -->
+          <div id="compress-dropzone" class="xp-dropzone" role="button" tabindex="0"
+               aria-label="이미지 파일을 여기에 드래그하거나 클릭하여 업로드">
+            <div class="xp-dropzone-icon" aria-hidden="true">📂</div>
+            <div class="xp-dropzone-text">이미지를 드래그하거나 클릭하여 업로드</div>
+            <div class="xp-dropzone-sub">지원 형식: JPG, PNG, WEBP · 클립보드 붙여넣기(Ctrl+V) 가능</div>
+            <button class="xp-btn xp-btn-primary" id="compress-upload-btn" style="margin-top:8px;">
+              📁 파일 선택
+            </button>
+            <input type="file" id="compress-file-input" accept="image/jpeg,image/png,image/webp"
+                   style="display:none;" aria-hidden="true">
+          </div>
+
+          <!-- 에디터 -->
+          <div id="compress-editor" style="display:none;">
+
+            <!-- 미리보기 -->
+            <div class="preview-grid">
+              <div class="preview-panel">
+                <div class="preview-panel-title">원본</div>
+                <div class="preview-container">
+                  <div class="preview-placeholder">로딩 중...</div>
+                  <img id="compress-preview-before" alt="원본 이미지" src="" style="display:none;max-width:100%;max-height:196px;object-fit:contain;">
+                </div>
+                <div class="size-label-bar" id="compress-before-label">—</div>
+              </div>
+              <div class="preview-panel">
+                <div class="preview-panel-title">압축 결과</div>
+                <div class="preview-container">
+                  <div class="preview-placeholder">압축 후 표시됩니다</div>
+                  <img id="compress-preview-after" alt="압축 결과" src="" style="display:none;max-width:100%;max-height:196px;object-fit:contain;">
+                </div>
+                <div class="size-label-bar" id="compress-after-label" style="position:relative;">
+                  —
+                  <span id="compress-saving-badge" class="saving-badge" style="display:none;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 설정 그리드 -->
+            <div class="settings-grid">
+
+              <!-- 압축 모드 -->
+              <div class="xp-groupbox" role="group" aria-labelledby="compress-mode-title">
+                <span class="xp-groupbox-title" id="compress-mode-title">압축 방식</span>
+
+                <div class="xp-form-row" style="display:flex;gap:16px;margin-bottom:8px;">
+                  <label class="xp-checkbox-wrap">
+                    <input type="radio" name="compress-mode" id="compress-mode-auto" class="xp-checkbox" checked>
+                    자동 (목표 크기)
+                  </label>
+                  <label class="xp-checkbox-wrap">
+                    <input type="radio" name="compress-mode" id="compress-mode-manual" class="xp-checkbox">
+                    수동 (품질 조절)
+                  </label>
+                </div>
+
+                <!-- 자동 모드 -->
+                <div id="compress-auto-wrap" style="display:flex;align-items:center;gap:8px;">
+                  <label class="xp-form-label" for="compress-target" style="min-width:60px;font-size:11px;">목표 크기</label>
+                  <select id="compress-target" class="xp-select">
+                    <option value="50">50 KB 이하</option>
+                    <option value="100">100 KB 이하</option>
+                    <option value="200" selected>200 KB 이하</option>
+                    <option value="500">500 KB 이하</option>
+                    <option value="1024">1 MB 이하</option>
+                  </select>
+                </div>
+
+                <!-- 수동 모드 -->
+                <div id="compress-manual-wrap" style="display:none;align-items:center;gap:8px;">
+                  <label class="xp-form-label" for="compress-quality" style="min-width:60px;font-size:11px;">품질</label>
+                  <input type="range" id="compress-quality" class="xp-slider" min="10" max="99" value="75"
+                         aria-label="압축 품질">
+                  <span id="compress-quality-label" style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;min-width:30px;">75%</span>
+                </div>
+              </div>
+
+              <!-- 출력 형식 -->
+              <div class="xp-groupbox" role="group" aria-labelledby="compress-output-title">
+                <span class="xp-groupbox-title" id="compress-output-title">출력 형식</span>
+
+                <div class="format-row" style="margin-bottom:8px;">
+                  <label class="xp-form-label" for="compress-format" style="min-width:40px;">형식</label>
+                  <select id="compress-format" class="xp-select">
+                    <option value="jpg">JPG (권장)</option>
+                    <option value="webp">WEBP (최고 압축률)</option>
+                    <option value="png">PNG (무손실)</option>
+                  </select>
+                </div>
+
+                <div style="padding:6px;background:#FFF8E8;border:1px solid #D0C080;font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#806000;line-height:1.6;">
+                  💡 JPG: 사진에 최적 · WEBP: 가장 작은 크기<br>
+                  PNG: 투명 배경·아이콘에 권장 (무손실)
+                </div>
+              </div>
+            </div>
+
+            <!-- 진행 표시줄 -->
+            <div id="compress-progress" class="xp-progressbar" style="display:none;margin:4px 0;">
+              <div class="xp-progressbar-fill" style="width:100%;"></div>
+            </div>
+
+            <!-- 액션 버튼 -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;flex-wrap:wrap;gap:6px;">
+              <div class="btn-group">
+                <button id="compress-btn" class="xp-btn xp-btn-primary" disabled>
+                  ⚡ 압축 실행
+                </button>
+                <button id="compress-download-btn" class="xp-btn" disabled>
+                  💾 다운로드
+                </button>
+                <button id="compress-reset-btn" class="xp-btn">
+                  🔄 초기화
+                </button>
+              </div>
+              <div style="font-family:'Tahoma',Arial,sans-serif;font-size:9px;color:#888;">
+                🔒 서버 전송 없음 · 개인정보 보호
+              </div>
+            </div>
+
+          </div><!-- /compress-editor -->
+
+          <!-- 상태 -->
+          <div class="xp-statusbar" role="status" aria-live="polite" style="margin-top:8px;">
+            <span class="xp-status-text status-info" id="compress-status">이미지를 업로드하면 시작됩니다.</span>
+          </div>
+
+          <div class="ad-inline" style="margin-top:8px;" aria-hidden="true">광고 영역 · 728×90</div>
+
+        </div>
+      </section>
+
+      <!-- ── 도구 패널: 이미지 형식 변환 ── -->
+      <section id="tool-convert" class="tool-panel" style="display:none;" aria-labelledby="tool-convert-heading">
+        <div class="xp-window-content xp-scrollable">
+
+          <h1 id="tool-convert-heading" style="font-family:'Tahoma',Arial,sans-serif;font-size:13px;margin-bottom:8px;color:#000080;">
+            🔄 이미지 형식 변환
+          </h1>
+          <p style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#555;margin-bottom:10px;">
+            JPG, PNG, WEBP 이미지를 원하는 형식으로 변환합니다. 투명 배경(PNG), 웹 최적화(WEBP), 범용 호환(JPG) 중 선택하세요.
+          </p>
+
+          <div class="ad-inline" aria-hidden="true">광고 영역 · 728×90</div>
+
+          <!-- 포맷 선택 탭 -->
+          <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;">
+            <button class="xp-btn convert-fmt-btn active" data-fmt="png"
+                    style="padding:6px 16px;font-size:11px;" aria-label="PNG로 변환">
+              🔷 PNG로 변환
+            </button>
+            <button class="xp-btn convert-fmt-btn" data-fmt="jpg"
+                    style="padding:6px 16px;font-size:11px;" aria-label="JPG로 변환">
+              🔶 JPG로 변환
+            </button>
+            <button class="xp-btn convert-fmt-btn" data-fmt="webp"
+                    style="padding:6px 16px;font-size:11px;" aria-label="WEBP로 변환">
+              🌐 WEBP로 변환
+            </button>
+          </div>
+
+          <!-- 드롭존 -->
+          <div id="convert-dropzone" class="xp-dropzone" role="button" tabindex="0"
+               aria-label="이미지 파일을 드래그하거나 클릭하여 업로드">
+            <div class="xp-dropzone-icon" aria-hidden="true">📂</div>
+            <div class="xp-dropzone-text">이미지를 드래그하거나 클릭하여 업로드</div>
+            <div class="xp-dropzone-sub">지원 형식: JPG, PNG, WEBP · 클립보드 붙여넣기(Ctrl+V) 가능</div>
+            <button class="xp-btn xp-btn-primary" id="convert-upload-btn" style="margin-top:8px;">
+              📁 파일 선택
+            </button>
+            <input type="file" id="convert-file-input" accept="image/jpeg,image/png,image/webp"
+                   style="display:none;" aria-hidden="true">
+          </div>
+
+          <!-- 에디터 -->
+          <div id="convert-editor" style="display:none;">
+
+            <!-- 미리보기 -->
+            <div class="preview-grid">
+              <div class="preview-panel">
+                <div class="preview-panel-title">원본</div>
+                <div class="preview-container">
+                  <div class="preview-placeholder">로딩 중...</div>
+                  <img id="convert-preview-before" alt="원본 이미지" src="" style="display:none;max-width:100%;max-height:196px;object-fit:contain;">
+                </div>
+                <div class="size-label-bar" id="convert-before-label">—</div>
+              </div>
+              <div class="preview-panel">
+                <div class="preview-panel-title">변환 결과 (<span id="convert-target-label">PNG</span>)</div>
+                <div class="preview-container">
+                  <div class="preview-placeholder">변환 후 표시됩니다</div>
+                  <img id="convert-preview-after" alt="변환 결과" src="" style="display:none;max-width:100%;max-height:196px;object-fit:contain;">
+                </div>
+                <div class="size-label-bar" id="convert-after-label" style="position:relative;">
+                  —
+                  <span id="convert-fmt-badge" class="saving-badge badge-good" style="display:none;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 품질 설정 -->
+            <div class="xp-groupbox" role="group" style="margin-bottom:8px;">
+              <span class="xp-groupbox-title">출력 설정</span>
+              <div id="convert-quality-wrap" style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                <label class="xp-form-label" for="convert-quality" style="min-width:40px;font-size:11px;">품질</label>
+                <input type="range" id="convert-quality" class="xp-slider" min="10" max="99" value="92" aria-label="변환 품질">
+                <span id="convert-quality-label" style="font-family:'Tahoma',Arial,sans-serif;font-size:10px;min-width:30px;">92%</span>
+              </div>
+              <div style="padding:6px;background:#FFF8E8;border:1px solid #D0C080;font-family:'Tahoma',Arial,sans-serif;font-size:10px;color:#806000;line-height:1.6;">
+                💡 PNG: 무손실 · 투명 배경 지원 · 파일 크기 큼<br>
+                WEBP: 최고 압축률 · 최신 브라우저 권장<br>
+                JPG: 범용 호환 · 투명 배경 미지원 (흰 배경으로 변환)
+              </div>
+            </div>
+
+            <!-- 진행 표시줄 -->
+            <div id="convert-progress" class="xp-progressbar" style="display:none;margin:4px 0;">
+              <div class="xp-progressbar-fill" style="width:100%;"></div>
+            </div>
+
+            <!-- 액션 버튼 -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;flex-wrap:wrap;gap:6px;">
+              <div class="btn-group">
+                <button id="convert-btn" class="xp-btn xp-btn-primary" disabled>
+                  ⚡ 변환 실행
+                </button>
+                <button id="convert-download-btn" class="xp-btn" disabled>
+                  💾 다운로드
+                </button>
+                <button id="convert-reset-btn" class="xp-btn">
+                  🔄 초기화
+                </button>
+              </div>
+              <div style="font-family:'Tahoma',Arial,sans-serif;font-size:9px;color:#888;">
+                🔒 서버 전송 없음 · 개인정보 보호
+              </div>
+            </div>
+
+          </div><!-- /convert-editor -->
+
+          <!-- 상태 -->
+          <div class="xp-statusbar" role="status" aria-live="polite" style="margin-top:8px;">
+            <span class="xp-status-text status-info" id="convert-status">이미지를 업로드하면 시작됩니다.</span>
+          </div>
+
+          <div class="ad-inline" style="margin-top:8px;" aria-hidden="true">광고 영역 · 728×90</div>
+
+        </div>
+      </section>
+
+    </div><!-- /xp-window-body -->
+
+    <!-- 창 하단 상태 표시줄 -->
+    <footer class="xp-statusbar" role="contentinfo">
+      <div class="xp-statusbar-panel">준비</div>
+      <div style="font-family:'Tahoma',Arial,sans-serif;font-size:9px;color:#666;margin-left:auto;">
+        XP Image Tools v1.0 · 모든 처리는 브라우저에서 직접 수행됩니다
+      </div>
+      <div style="font-family:'Tahoma',Arial,sans-serif;font-size:9px;color:#666;margin-left:auto;">
+        © 2025 XP Image Tools · <a href="pages/privacy.html" target="_blank" style="color:#3169C6;text-decoration:none;">개인정보처리방침</a>
+      </div>
+    </footer>
+  </div><!-- /main-window -->
+
+</div><!-- /desktop -->
+
+<!-- ── 작업 표시줄 ── -->
+<footer id="taskbar" role="navigation" aria-label="작업 표시줄">
+  <!-- 시작 버튼 -->
+  <button id="start-btn" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu"
+          aria-label="시작 메뉴 열기">
+    <!-- XP 로고 SVG -->
+    <svg class="start-btn-logo" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0"  y="0"  width="10" height="10" fill="#F25022"/>
+      <rect x="12" y="0"  width="10" height="10" fill="#7FBA00"/>
+      <rect x="0"  y="12" width="10" height="10" fill="#00A4EF"/>
+      <rect x="12" y="12" width="10" height="10" fill="#FFB900"/>
+    </svg>
+    시작
+  </button>
+
+  <!-- 열린 창 목록 -->
+  <div id="taskbar-windows" role="list" aria-label="열린 창 목록"></div>
+
+  <!-- 트레이 -->
+  <div id="taskbar-tray" aria-label="시스템 트레이">
+    <span aria-hidden="true">🔊</span>
+    <div id="taskbar-clock" aria-live="off" aria-label="현재 시간"></div>
+  </div>
+</footer>
+
+<!-- ── 시작 메뉴 ── -->
+<nav id="start-menu" role="menu" aria-label="시작 메뉴" aria-hidden="true">
+
+  <!-- 헤더 -->
+  <div class="start-menu-header">
+    <div class="start-menu-user-icon" aria-hidden="true">👤</div>
+    <div class="start-menu-username">XP 사용자</div>
+  </div>
+
+  <!-- 본문 -->
+  <div class="start-menu-body">
+
+    <!-- 좌측: 주요 기능 -->
+    <div class="start-menu-left" role="group" aria-label="주요 도구">
+
+      <!-- 자주 사용 -->
+      <div class="start-menu-item" role="menuitem" tabindex="0" data-action="resize">
+        <div class="menu-icon" aria-hidden="true">🖼️</div>
+        <div class="menu-text">
+          <div class="menu-label">이미지 크기 변경</div>
+          <div class="menu-desc">픽셀 단위로 정확하게</div>
+        </div>
+      </div>
+
+      <div class="start-menu-sep" role="separator"></div>
+
+      <div class="start-menu-item" role="menuitem" tabindex="0" data-action="compress">
+        <div class="menu-icon" aria-hidden="true">📦</div>
+        <div class="menu-text">
+          <div class="menu-label">이미지 압축</div>
+          <div class="menu-desc">파일 용량 줄이기</div>
+        </div>
+      </div>
+
+      <div class="start-menu-item" role="menuitem" tabindex="0" data-action="to-png">
+        <div class="menu-icon" aria-hidden="true">🔷</div>
+        <div class="menu-text">
+          <div class="menu-label">PNG 변환</div>
+          <div class="menu-desc">투명 배경 지원</div>
+        </div>
+      </div>
+
+      <div class="start-menu-item" role="menuitem" tabindex="0" data-action="to-jpg">
+        <div class="menu-icon" aria-hidden="true">🔶</div>
+        <div class="menu-text">
+          <div class="menu-label">JPG 변환</div>
+          <div class="menu-desc">용량 최적화</div>
+        </div>
+      </div>
+
+      <div class="start-menu-item" role="menuitem" tabindex="0" data-action="to-webp">
+        <div class="menu-icon" aria-hidden="true">🌐</div>
+        <div class="menu-text">
+          <div class="menu-label">WEBP 변환</div>
+          <div class="menu-desc">웹 최적화 포맷</div>
+        </div>
+      </div>
+
+      <div class="start-menu-item" role="menuitem" tabindex="0" data-action="thumbnail">
+        <div class="menu-icon" aria-hidden="true">🖼️</div>
+        <div class="menu-text">
+          <div class="menu-label">썸네일 제작</div>
+          <div class="menu-desc">유튜브·블로그 썸네일 (준비 중)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 우측: 페이지 링크 -->
+    <div class="start-menu-right" role="group" aria-label="사이트 정보">
+      <div class="start-menu-section-title">사이트 정보</div>
+
+      <div class="start-menu-item small" role="menuitem" tabindex="0" data-action="about">
+        <div class="menu-icon" aria-hidden="true">📄</div>
+        <span>사이트 소개</span>
+      </div>
+
+      <div class="start-menu-item small" role="menuitem" tabindex="0" data-action="features">
+        <div class="menu-icon" aria-hidden="true">⚙️</div>
+        <span>기능 소개</span>
+      </div>
+
+      <div class="start-menu-item small" role="menuitem" tabindex="0" data-action="guide">
+        <div class="menu-icon" aria-hidden="true">📖</div>
+        <span>사용 가이드</span>
+      </div>
+
+      <div class="start-menu-item small" role="menuitem" tabindex="0" data-action="faq">
+        <div class="menu-icon" aria-hidden="true">❓</div>
+        <span>자주 묻는 질문</span>
+      </div>
+
+      <div class="start-menu-item small" role="menuitem" tabindex="0" data-action="contact">
+        <div class="menu-icon" aria-hidden="true">📬</div>
+        <span>문의하기</span>
+      </div>
+
+      <div class="start-menu-sep" role="separator"></div>
+
+      <div class="start-menu-item small" role="menuitem" tabindex="0" data-action="privacy">
+        <div class="menu-icon" aria-hidden="true">🔒</div>
+        <span>개인정보처리방침</span>
+      </div>
+
+      <div class="start-menu-item small" role="menuitem" tabindex="0" data-action="terms">
+        <div class="menu-icon" aria-hidden="true">📋</div>
+        <span>이용약관</span>
+      </div>
+    </div>
+  </div><!-- /start-menu-body -->
+
+  <!-- 푸터 -->
+  <div class="start-menu-footer">
+    <button class="start-menu-footer-btn" onclick="window.XPApp?.handleMenuAction('privacy')" aria-label="개인정보처리방침 열기">
+      🔒 개인정보
+    </button>
+  </div>
+</nav>
+
+<!-- ── 메시지 박스 오버레이 ── -->
+<div id="msgbox-overlay" class="xp-msgbox-overlay" role="alertdialog" aria-modal="true" aria-labelledby="msgbox-title">
+  <div class="xp-msgbox xp-window">
+    <header class="xp-titlebar">
+      <div class="xp-titlebar-left">
+        <span class="xp-titlebar-title" id="msgbox-title">알림</span>
+      </div>
+    </header>
+    <div class="xp-msgbox-body">
+      <span class="xp-msgbox-icon" id="msgbox-icon">ℹ️</span>
+      <div class="xp-msgbox-text" id="msgbox-text"></div>
+    </div>
+    <div class="xp-msgbox-footer">
+      <button id="msgbox-ok" class="xp-btn xp-btn-primary">확인</button>
+    </div>
+  </div>
+</div>
+
+<!-- 광고 영역 placeholder (하단) -->
+<div class="ad-placeholder ad-bottom" role="complementary" aria-label="광고 영역"></div>
+<div class="ad-placeholder ad-side"   role="complementary" aria-label="광고 영역"></div>
+
+<!-- ── SEO 텍스트 (숨김) ── -->
+<section class="sr-only" aria-hidden="true">
+  <h2>XP Image Tools 소개</h2>
+  <p>XP Image Tools는 Windows XP 스타일의 인터페이스로 구성된 무료 온라인 이미지 편집 도구입니다. 이미지 크기 변경, 압축, PNG/JPG/WEBP 형식 변환 등 다양한 기능을 브라우저에서 직접 처리합니다. 별도 프로그램 설치 없이 웹 브라우저만 있으면 즉시 사용할 수 있습니다.</p>
+  <h3>이미지 크기 변경 (리사이즈)</h3>
+  <p>이미지의 가로·세로 픽셀을 자유롭게 조절합니다. 비율 유지 옵션으로 한쪽 값만 입력해도 나머지가 자동 계산됩니다. FHD(1920×1080), HD(1280×720), VGA(640×480) 등 빠른 크기 선택을 지원합니다. 단계적 리샘플링으로 화질 저하를 최소화합니다.</p>
+  <h3>이미지 압축</h3>
+  <p>JPG, PNG, WEBP 이미지의 파일 크기를 줄입니다. 자동 모드에서는 목표 파일 크기(50KB~1MB)를 입력하면 이진 탐색 알고리즘이 최적 품질을 자동으로 찾습니다. 수동 모드에서는 품질 슬라이더로 직접 조절합니다. 이메일 첨부, SNS 업로드, 웹 최적화에 활용하세요.</p>
+  <h3>이미지 형식 변환</h3>
+  <p>PNG, JPG, WEBP 세 가지 형식을 서로 자유롭게 변환합니다. PNG는 투명 배경 지원 무손실 포맷, JPG는 사진에 최적화된 손실 압축 포맷, WEBP는 JPG 대비 25~35% 작은 최신 포맷입니다.</p>
+  <h3>개인정보 보호</h3>
+  <p>모든 이미지 처리는 사용자 브라우저에서 직접 이루어지며, 서버로 전송되지 않습니다. 회원가입, 로그인 없이 바로 사용 가능합니다. 업로드한 이미지는 브라우저 탭을 닫으면 완전 소멸됩니다.</p>
+  <h3>관련 페이지</h3>
+  <ul>
+    <li><a href="pages/about.html">사이트 소개 - XP Image Tools</a></li>
+    <li><a href="pages/features.html">기능 소개 - 이미지 크기변경, 압축, 변환</a></li>
+    <li><a href="pages/privacy.html">개인정보처리방침</a></li>
+  </ul>
+</section>
+
+<!-- 스크립트 -->
+<script src="js/app.js"></script>
+<script src="js/resize.js"></script>
+<script src="js/compress.js"></script>
+<script src="js/convert.js"></script>
+
+<script>
+/* ── 빠른 크기 선택 버튼 ── */
+document.querySelectorAll('[data-preset]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const [w, h] = btn.dataset.preset.split(',').map(Number);
+    const wInput = document.getElementById('resize-width');
+    const hInput = document.getElementById('resize-height');
+    const keepR  = document.getElementById('keep-ratio');
+    if (wInput && hInput) {
+      keepR && (keepR.checked = false); // 비율 강제 해제하여 정확한 크기 설정
+      wInput.value = w;
+      hInput.value = h;
+      wInput.dispatchEvent(new Event('input'));
+    }
+  });
+});
+
+/* ── 시작 메뉴 키보드 탐색 ── */
+document.getElementById('start-menu')?.addEventListener('keydown', (e) => {
+  const items = [...document.querySelectorAll('#start-menu [role="menuitem"]')];
+  const idx   = items.indexOf(document.activeElement);
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    items[(idx + 1) % items.length]?.focus();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    items[(idx - 1 + items.length) % items.length]?.focus();
+  } else if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    document.activeElement?.click();
+  }
+});
+
+/* ── 시작 메뉴 아이템 키보드 ── */
+document.querySelectorAll('#start-menu [role="menuitem"]').forEach(item => {
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      item.click();
+    }
+  });
+});
+</script>
+
+</body>
+</html>

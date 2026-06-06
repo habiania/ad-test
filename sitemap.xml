@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- 메인 페이지 -->
+  <url>
+    <loc>https://xp-image-tools.pages.dev/</loc>
+    <lastmod>2025-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://xp-image-tools.pages.dev/og-image.png</image:loc>
+      <image:title>XP Image Tools - 무료 온라인 이미지 편집</image:title>
+    </image:image>
+  </url>
+
+  <!-- 주요 페이지 -->
+  <url><loc>https://xp-image-tools.pages.dev/pages/about.html</loc><lastmod>2025-06-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/features.html</loc><lastmod>2025-06-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/guide.html</loc><lastmod>2025-06-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/faq.html</loc><lastmod>2025-06-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/contact.html</loc><lastmod>2025-06-08</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/privacy.html</loc><lastmod>2025-06-08</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/terms.html</loc><lastmod>2025-06-08</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+
+  <!-- 블로그 -->
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/</loc><lastmod>2025-06-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/instagram-image-size.html</loc><lastmod>2025-06-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/webp-convert-guide.html</loc><lastmod>2025-06-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/image-compress-tips.html</loc><lastmod>2025-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/png-jpg-difference.html</loc><lastmod>2025-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/sns-image-guide.html</loc><lastmod>2025-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/website-image-optimize.html</loc><lastmod>2025-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/email-image-attach.html</loc><lastmod>2025-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xp-image-tools.pages.dev/pages/blog/blog-image-seo.html</loc><lastmod>2025-06-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>
